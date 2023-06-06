@@ -1,0 +1,10 @@
+<SCRIPT LANGUAGE="VBScript">
+  
+function gaugeSPEED_Change()
+	gaugeSPEED.NeedleID = 1
+	call write_fmaster_variable("Speed Required", gaugeSPEED.NeedleValue)
+End Function
+function gaugeSPEED_MouseMove()
+End Function  
+</script>   
+<script type="text/javascript">

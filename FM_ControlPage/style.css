@@ -1,0 +1,117 @@
+
+
+
+H2	{background-color: #FFED57;
+	width:100%;
+	padding: 5px;
+	border: 1px solid gray;}
+.cell1 {
+   border:1px solid #C2CFD1;
+   background-color : #EEF2f3;
+   vertical-align: middle;
+   ;
+}
+
+
+
+
+div.hide TD {
+  text-align: center;
+  font-size: 11px;
+
+  }
+.headline
+{
+  color : black;
+  font-size : 13;
+  font-weight : bold;
+  
+}
+ div.tabArea {
+  font-weight: bold;
+  position : relative;
+  top : 13px;
+  border-bottom-width: 0;
+
+}
+
+
+a.tab1 {
+  width: 180px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 1px solid #000000;
+  border-bottom-width: 0px;
+  padding: 2px 1em 2px 1em;
+  text-decoration: none;
+  position:absolute;
+  top: 100px;
+  left: 80px;
+  z-index : 100;
+}
+a.tab2 {
+  width: 180px;
+  text-align: center;
+  background-color: #f0f0f0;
+  border: 1px solid #000000;
+  border-bottom-width: 0px;
+  padding: 2px 1em 2px 1em;
+  text-decoration: none;
+  position:absolute;
+  top: 100px;
+  left : 290px;
+  z-index : 100;
+}
+
+
+a:link, a:visited {
+  color: #808080;
+}
+
+a:hover {
+  background-color: #d0d0d0;
+  color: #606060;
+  font-weight : bold;
+}
+a.tab1.activeTab, a.tab1.activeTab:hover, a.tab1.activeTab:visited,
+a.tab2.activeTab, a.tab2.activeTab:hover, a.tab2.activeTab:visited,
+a.tab3.activeTab, a.tab3.activeTab:hover, a.tab3.activeTab:visited,
+a.tab4.activeTab, a.tab4.activeTab:hover, a.tab4.activeTab:visited,
+a.activeTab, a.activeTab:hover, a.activeTab:visited {    
+  background-color: #E1E7E8;
+  color: #51626F;
+  font-weight: bold;
+  z-index : 102;
+}
+
+
+
+
+
+
+div.hide {
+	width : 770px;
+	height : 520px;
+	background-color: #E1E7E8;
+	border: 1px solid black;
+	clear: both;
+	padding: 0.5em 0.5em;
+	position : absolute;
+	top : 120;
+	left: 25px;
+	z-index : 101;
+}
+
+
+
+#ftr{
+	width: 750px;
+	height: 23px;
+	line-height: 23px;
+	border: 1px solid #C3CFD1;
+	font-size: .9em;
+	background-color: #FFF;
+	z-index: 1;
+}
+
+

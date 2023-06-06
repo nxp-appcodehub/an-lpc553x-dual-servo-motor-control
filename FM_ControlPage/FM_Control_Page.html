@@ -1,0 +1,1057 @@
+<!--DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<meta name="VI60_defaultClientScript" content="JScript">
+<!----------------------------------------------------------------------------------
+*  
+* Freescale Semiconductor Inc.
+* Copyright (c) 2014 Freescale, Inc.
+* ALL RIGHTS RESERVED.
+*
+* Freescale MPG/Roznov Czech Systems Center
+*
+******************************************************************************
+*
+* $File Name: control_page.htm$
+* $Date:      March-3-2014$
+* $Version:   0.1.1.0$
+* unsupported features by ebedded side removed or commented for current status of emb.SW
+*
+* Description: FreeMaster/HTML control page PMSM Sensorless Vector Control on Kinetis
+*
+!--------------------------------------------------------------------------------->
+<html>        
+  <HEAD>                   
+    <meta name="VI60_defaultClientScript" content="VBScript">                   
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">                   
+    <meta name="ProgId" content="FrontPage.Editor.Document">              
+    <TITLE>LPC Dual Servo Control               
+    </TITLE>              
+    <STYLE type="text/css">.stop {    width : 70px;   background-color : #D4D0C8;   color: black;   border: 2px solid black;       height: 30px;   padding : 3px;   vertical-align: middle;   text-align: center;   font-weight: bold;   font-size : 12px;}.init {     width : 70px;   background-color : #D4D0C8;   border: 2px solid black;       height: 30px;   padding : 3px;   vertical-align: middle;   text-align: center;   font-weight: bold;   font-size : 12px;}.run {    width : 70px;   background-color : green;   border: 2px solid black;       height: 30px;   padding : 3px;   vertical-align: middle;   text-align: center;   color: white;   font-weight: bold;   font-size : 12px;}.fault {     width : 70px;   background-color : red;   color: white;   border: 2px solid black;       height: 30px;   padding : 3px;   vertical-align: middle;   text-align: center;   font-weight: bold;   font-size : 12px;}.number {   font-size: 14px;   background-color: white;   font-weight: bold;   color: blue;   border: 2px solid black;       height: 23px;   padding: 2px;   width: 50px   }.position_button{   width:60px;   height:22px; } table, body	{font-family: arial, tahoma, sans-serif; 	font-size: 14px;}                
+    </STYLE>              
+    <link rel="stylesheet" href="body.css">                       
+    <link rel="stylesheet" href="style.css">                 
+  </HEAD>        
+  <object name="FreeMaster" width="0" height="0" classid="clsid:48A185F1-FFDB-11D3-80E3-00C04F176153">        
+  </object>        
+  <OBJECT CLASSID = "clsid:5220cb21-c88d-11cf-b347-00aa00a28331">                        
+    <PARAM NAME="LPKPath" VALUE="gmsctls.lpk">        
+  </OBJECT>               
+  <body onload ="start_the_page()">       
+  </body>        
+  <BODY>              
+    <Table  width="820" bgcolor="white" cellspacing = 10; cellpadding = 5; >                     
+      <TR>                             
+        <TD class="cell1" >                                      
+          <font style=" position:relative; left:20;" face=verdana color=#51626F size=5 weigth=bold>	   <strong>LPC Dual Servo Control </strong>	  
+          </font>                           
+          <img src="nxp.png" style=" width: 200px; position:relative; left:30; vertical-align:bottom">             
+        </td>                          
+      </Tr>                      
+      <TR bgcolor = #eef2f3>                        
+        <TD height = 580; colspan = 4; class="cell1">                              
+          <DIV id="visible_1" style="visibility:visible">                                       
+            <a href="#" class="tab1 activeTab" onClick="tabs(textA,textB,1)">Application Control</a>                                       
+            <a href="#" class="tab2" onClick="tabs(textB,textA,2)">Block Diagram</a>                                         
+          </DIV>                                      
+          <DIV id="visible_2" style="visibility:hidden">                                       
+            <a href="#" class="tab1" onClick="tabs(textA,textB,1)">Application Control</a>                                       
+            <a href="#" class="tab2 activeTab  " onClick="tabs(textB,textA,2)">Block Diagram</a>                              
+          </DIV>                                         
+          <!------------------------------------------1st TAB---------------------------------------------------->                                   
+          <div class="hide" id="textA" style="visibility: visible">                                    
+            <fieldset style="height:150; width:200; position:absolute; top:10px; left:10px">                                             
+              <legend class="headline">Application Switch                                           
+              </legend>                                             
+              <TABLE>                                                     
+                <TR>                                                             
+                  <TD style="padding:2px; position:absolute; top:20px; left:30px">                                                                   
+                    <input type=button id="start_stop_BTN" onClick=Start_stop_click() Value="Start" style="width : 120; height:35; font-weight: bold ; color : green " >      </TD>                                                             
+                                                     
+                </TR> 
+				<TR>
+                  <TD style="font-weight: bold; font-size:13px; width : 180; height:50; position:absolute; top:70px; left:10p"> Application Status:&nbsp;&nbsp; </TD>
+				</TR>
+				<TR>
+				      <TD style="padding:2px; position:absolute; top:100px; left:50px">                                                                  
+                    <span class = "stop" id="app_status" >STOP                                                             
+                    </span> </TD>
+				</TR>
+              </TABLE>                                           
+            </fieldset>  
+
+			<fieldset style="height:240; width:200; position:absolute; top:165px; left:10px">                                          
+              <legend class="headline" >Faults Status                                           
+              </legend>                                          
+              <TABLE style="padding:20; height:150" cellspacing="12">                                                
+                <TR>                                                      
+                  <TD style="text-align:left; POSITION: relative; LEFT: 5px;">FreeMASTER Communication </TD>                                     
+                  <TD style="width:70;">                      
+                    <img src="led_off01.bmp" id="fmstr_led"> </TD>                                                  
+                </TR> 
+                <TR>                                                      
+                  <TD style="text-align:left; POSITION: relative; LEFT: 5px;">DC Bus Under Voltage </TD>                                    
+                  <TD style="width:70;">                    
+                    <img src="led_off01.bmp" id="under_DCB_led" > </TD>                                                
+                </TR>                                                
+                <TR>                                        
+                  <TD style="text-align:left; POSITION: relative; LEFT: 5px;">DC Bus Over Voltage </TD>                                     
+                  <TD style="width:70;">                    
+                    <img src="led_off01.bmp" id="over_DCB_led"> </TD>                                                
+                </TR>				
+                <TR>                                     
+                  <TD style="text-align:left; POSITION: relative; LEFT: 5px;">M1 Over Current</TD>                                     
+                  <TD style="width:70;">                      
+                    <img src="led_off01.bmp" id="M1_over_current_led"> </TD>                                                  
+                </TR>                                                
+                <TR>                                     
+                  <TD style="text-align:left; POSITION: relative; LEFT: 5px;">M2 Over Current</TD>                                     
+                  <TD style="width:70;">                      
+                    <img src="led_off01.bmp" id="M2_over_current_led"> </TD>                                                  
+                </TR>                       
+              </Table>
+            </fieldset>
+			
+            <fieldset style="height:50; width:200; position:absolute; top:420px; left:10px">                                             
+              <legend class="headline">X-Y Graph Mode                                           
+              </legend>                                             
+              <TABLE >                                                     
+                <TR>                                                             
+                  <TD style="padding:8px;">                                                                   
+                    <input type=button id="demo_BTN" onClick=demo_click() Value="X-Y Graph ON" style="width : 145; height:35; font-weight: bold ; color : green" >      </TD>                                                                    
+                  <TD style="width:118;">                                                            
+                    <img src="led_off01.bmp" id="demo_led">       </TD>                                                     
+                </TR>                                             
+              </TABLE>                                    
+            </fieldset>                                    
+                                                
+            <fieldset style="height:240; width:530; position:absolute; top:10px; left:230px"  >                                          
+              <legend class="headline" >M1 Position Control                                           
+              </legend> 
+			
+              <table style="padding:15; position:absolute; top:30px; left:30px">                           
+                      <tr>                                 
+                        <TD style="padding = 4px; text-align:left">                                                                       
+                          <fieldset style="width: 150px; height:162px; position:relative; left:-20; ">                                                                             
+                            <legend class="headline">Position Selector                                                                       
+                            </legend>                                                                             
+                            <table >                                                                                   
+                              <tr>                                                                                         
+                                <td colspan = 2>                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="0" value=Reset></td>                                                                                   
+                              </tr>                                                                                   
+                              <tr>
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="-1" value=-0.1>
+								</td>							  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="1" value= +0.1>
+								</td>                                                                                           
+                                                                                   
+                              </tr>                                                                                   
+                              <tr>  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="-2" value=-1></td>							  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="2" value= +1></td>                                                                                          
+                              </tr>                                                                                   
+                              <tr>  
+                                <td style="padding:2px; padding-left:6px">
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="-3" value=-10></td>                                                                     
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="3" value= +10></td>
+                              </tr>                                                                                      
+                              <tr>  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="-4" value= Min></td>							  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M1_position_button_click(this.id)" id ="4" value= Max></td>
+                              </tr>                                                                                                                                                                       
+                            </table>                                                                       
+                          </fieldset>                                                  
+                        </td>                                                   
+                      
+				
+					  
+					  </tr>               
+                    </table> 
+				  
+              <table style="padding:15; position:absolute; top:10px; left:170px">                                                
+                <TR>                                                      
+                  <TD colspan = 4 style="padding:5px;">                                                                            
+                    <!-- Speed Gauge 14277081-->   	  								                                                             
+                    <OBJECT id="M1_gaugeSPEED" codeBase="agauge.cab" height="180" width="320" classid="clsid:B2E0C2EA-A543-11CF-BC8C-207402C10627" VIEWASTEXT>                                                                                                       
+                      <param name="_">                                                                                                       
+                      <param name="_Version" value="131082">                                                                                                       
+                      <param name="_Version" value="131082">                                                                                                       
+                      <param name="_ExtentX" value="8837">                                                                                                       
+                      <param name="_ExtentY" value="5371">                                                                                                       
+                      <param name="_StockProps" value="70">                                                                                                       
+                      <param name="Caption" value>                                                                                                       
+                      <param name="Enabled" value="-1">                                                                                                       
+                      <param name="BackColor" value="15263713">                                                                                                       
+                      <param name="AutoRedraw" value="-1">                                                                                                       
+                      <param name="BevelInner" value="2">                                                                                                       
+                      <param name="BevelOuter" value="1">                                                                                                       
+                      <param name="BevelWidth" value="1">                                                                                                       
+                      <param name="BorderWidth" value="2">                                                                                                       
+                      <param name="BorderType" value="1">                                                                                                       
+                      <param name="Outline" value="0">                                                                                                       
+                      <param name="OutlineAlign" value="2">                                                                                                       
+                      <param name="OutlineColor" value="0">                                                                                                       
+                      <param name="OutlineTitle" value>                                                                                                       
+                      <param name="OutlineWidth" value="1">                                                                                                       
+                      <param name="FocusOutline" value="0">                                                                                                       
+                      <param name="FrameBottom" value="1.29">                                                                                                       
+                      <param name="FrameColor" value="8421440">                                                                                                       
+                      <param name="FrameLeft" value="-2.25">                                                                                                       
+                      <param name="FrameRight" value="2.25">                                                                                                       
+                      <param name="FrameShape??0" value="0,180, 100,0, 900,0, 1000,180, 1000,820, 900,1000, 100,1000, 0,820">                                                                                                       
+                      <param name="FrameStyle" value="0">                                                                                                       
+                      <param name="FrameTop" value="-1.5">                                                                                                       
+                      <param name="ScaleSize" value="1">                                                                                                       
+                      <param name="ScaleDirection0" value="0">                                                                                                       
+                      <param name="ScaleMaxValue0" value="90">                                                                                                       
+                      <param name="ScaleMinValue0" value="-90">                                                                                                       
+                      <param name="ScaleOriginX0" value="0">                                                                                                       
+                      <param name="ScaleOriginY0" value="-0.45">                                                                                                       
+                      <param name="ScaleStartAngle0" value="245">                                                                                                       
+                      <param name="ScaleStopAngle0" value="115">                                                                                                       
+                      <param name="FontSize" value="2">                                                                                                       
+                      <param name="CaptionSize" value="2">                                                                                                       
+                      <param name="CaptionColor0" value="10485760">                                                                                                       
+                      <param name="CaptionFontID0" value="0">                                                                                                       
+                      <param name="Caption0" value="Position">                                                                                                       
+                      <param name="CaptionX0" value="0">                                                                                                       
+                      <param name="CaptionY0" value="-0.7">                                                                                                       
+                      <param name="CaptionAlign0" value="2">                                                                                                       
+                      <param name="CaptionVisible0" value="-1">                                                                                                       
+                      <param name="CaptionFlag0" value="0">                                                                                                       
+                      <param name="CaptionColor1" value="10485760">                                                                                                       
+                      <param name="CaptionFontID1" value="1">                                                                                                       
+                      <param name="Caption1" value="Rounds">                                                                                                       
+                      <param name="CaptionX1" value="0">                                                                                                       
+                      <param name="CaptionY1" value="-0.9">                                                                                                       
+                      <param name="CaptionAlign1" value="2">                                                                                                       
+                      <param name="CaptionVisible1" value="-1">                                                                                                       
+                      <param name="CaptionFlag1" value="0">                                                                                                       
+                      <param name="AnnularSize" value="4">                                                                                                       
+                      <param name="AnnularColor0" value="60280">                                                                                                       
+                      <param name="AnnularFloat0" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset0" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius0" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius0" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID0" value="0">                                                                                                       
+                      <param name="AnnularStartValue0" value="-90">                                                                                                       
+                      <param name="AnnularStopValue0" value="90">                                                                                                       
+                      <param name="AnnularVisible0" value="-1">                                                                                                       
+                      <param name="AnnularColor1" value="500">                                                                                                       
+                      <param name="AnnularFloat1" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset1" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius1" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius1" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID1" value="0">                                                                                                       
+                      <param name="AnnularStartValue1" value="-10">                                                                                                       
+                      <param name="AnnularStopValue1" value="10">                                                                                                       
+                      <param name="AnnularVisible1" value="-1">                                                                                                       
+                      <param name="AnnularColor2" value="500">                                                                                                       
+                      <param name="AnnularFloat2" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset2" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius2" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius2" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID2" value="0">                                                                                                       
+                      <param name="AnnularStartValue2" value="-90">                                                                                                       
+                      <param name="AnnularStopValue2" value="-80">                                                                                                       
+                      <param name="AnnularVisible2" value="-1">                                                                                                       
+                      <param name="AnnularColor3" value="500">                                                                                                       
+                      <param name="AnnularFloat3" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset3" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius3" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius3" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID3" value="0">                                                                                                       
+                      <param name="AnnularStartValue3" value="80">                                                                                                       
+                      <param name="AnnularStopValue3" value="90">                                                                                                       
+                      <param name="AnnularVisible3" value="-1">                                                                                                       
+                      <param name="HubSize" value="2">                                                                                                       
+                      <param name="HubColor0" value="12632256">                                                                                                       
+                      <param name="HubRadius0" value="0.119">                                                                                                       
+                      <param name="HubScaleID0" value="0">                                                                                                       
+                      <param name="HubStyle0" value="0">                                                                                                       
+                      <param name="HubVisible0" value="-1">                                                                                                       
+                      <param name="HubColor1" value="9539985">                                                                                                       
+                      <param name="HubRadius1" value="0.089">                                                                                                       
+                      <param name="HubScaleID1" value="0">                                                                                                       
+                      <param name="HubStyle1" value="0">                                                                                                       
+                      <param name="HubVisible1" value="-1">                                                                                                       
+                      <param name="NeedleSize" value="2">                                                                                                                                            
+                      <param name="NeedleColor0" value="0">                                                                                                       
+                      <param name="NeedleDigital0" value="0">                                                                                                       
+                      <param name="NeedleDigitalColor0" value="0">                                                                                                       
+                      <param name="NeedleDigitalDecimals0" value="0">                                                                                                       
+                      <param name="NeedleDigitalFontID0" value="0">                                                                                                       
+                      <param name="NeedleDigitalX0" value="0">                                                                                                       
+                      <param name="NeedleDigitalY0" value="-0.68">                                                                                                       
+                      <param name="NeedleLength0" value="1.2">                                                                                                       
+                      <param name="NeedleMouseControl0" value="0">                                                                                                       
+                      <param name="NeedleScaleID0" value="0">                                                                                                       
+                      <param name="NeedleShape??0" value>                                                                                                       
+                      <param name="NeedleStyle0" value="1">                                                                                                       
+                      <param name="NeedleValue0" value="0">                                                                                                       
+                      <param name="NeedleWidth0" value="0.1">                                                                                                       
+                      <param name="NeedleVisible0" value="-1">                                                                                                       
+                      <param name="NeedleClip0" value="-1">                                                                                                                                                                                 
+                      <param name="NeedleColor1" value="16711680">                                                                                                       
+                      <param name="NeedleDigital1" value="1">                                                                                                       
+                      <param name="NeedleDigitalColor1" value="16711680">                                                                                                       
+                      <param name="NeedleDigitalDecimals1" value="0">                                                                                                       
+                      <param name="NeedleDigitalFontID1" value="0">                                                                                                       
+                      <param name="NeedleDigitalX1" value="0">                                                                                                       
+                      <param name="NeedleDigitalY1" value="0">                                                                                                       
+                      <param name="NeedleLength1" value="0.8">                                                                                                       
+                      <param name="NeedleMouseControl1" value="2">                                                                                                       
+                      <param name="NeedleScaleID1" value="0">                                                                                                       
+                      <param name="NeedleShape??1" value>                                                                                                       
+                      <param name="NeedleStyle1" value="1">                                                                                                       
+                      <param name="NeedleValue1" value="0">                                                                                                       
+                      <param name="NeedleWidth1" value="0.1">                                                                                                       
+                      <param name="NeedleVisible1" value="-1">                                                                                                       
+                      <param name="NeedleClip1" value="-1">                                                                                                                                                                                 
+                      <param name="TicSize" value="3">                                                                                                       
+                      <param name="TicColor0" value="0">                                                                                                       
+                      <param name="TicFloat0" value="0">                                                                                                       
+                      <param name="TicDeltaValue0" value="10">                                                                                                       
+                      <param name="TicFloatOffset0" value="0">                                                                                                       
+                      <param name="TicFontID0" value="0">                                                                                                       
+                      <param name="TicInnerRadius0" value="1.27">                                                                                                       
+                      <param name="TicLabel0" value="-1">                                                                                                       
+                      <param name="TicLabelRadius0" value="1.63">                                                                                                       
+                      <param name="TicLabelRotated0" value="0">                                                                                                       
+                      <param name="TicOuterRadius0" value="1.47">                                                                                                       
+                      <param name="TicScaleID0" value="0">                                                                                                       
+                      <param name="TicStartValue0" value="-80">                                                                                                       
+                      <param name="TicStopValue0" value="80">                                                                                                       
+                      <param name="TicStyle0" value="0">                                                                                                       
+                      <param name="TicWidth0" value="0">                                                                                                       
+                      <param name="TicVisible0" value="-1">                                                                                                       
+                      <param name="TicAutoTic0" value="0">                                                                                                       
+                      <param name="TicCount0" value="6">                                                                                                       
+                      <param name="TicSubCount0" value="0">                                                                                                       
+                      <param name="TicColor1" value="0">                                                                                                       
+                      <param name="TicFloat1" value="0">                                                                                                       
+                      <param name="TicDeltaValue1" value="2">                                                                                                       
+                      <param name="TicFloatOffset1" value="0">                                                                                                       
+                      <param name="TicFontID1" value="0">                                                                                                       
+                      <param name="TicInnerRadius1" value="1.27">                                                                                                       
+                      <param name="TicLabel1" value="0">                                                                                                       
+                      <param name="TicLabelRadius1" value="1">                                                                                                       
+                      <param name="TicLabelRotated1" value="0">                                                                                                       
+                      <param name="TicOuterRadius1" value="1.35">                                                                                                       
+                      <param name="TicScaleID1" value="0">                                                                                                       
+                      <param name="TicStartValue1" value="-90">                                                                                                       
+                      <param name="TicStopValue1" value="90">                                                                                                       
+                      <param name="TicStyle1" value="0">                                                                                                       
+                      <param name="TicWidth1" value="0">                                                                                                       
+                      <param name="TicVisible1" value="-1">                                                                                                       
+                      <param name="TicAutoTic1" value="0">                                                                                                       
+                      <param name="TicCount1" value="6">                                                                                                       
+                      <param name="TicSubCount1" value="0">                                                                                                       
+                      <param name="TicColor2" value="0">                                                                                                       
+                      <param name="TicFloat2" value="0">                                                                                                       
+                      <param name="TicDeltaValue2" value="2">                                                                                                       
+                      <param name="TicFloatOffset2" value="0">                                                                                                       
+                      <param name="TicFontID2" value="0">                                                                                                       
+                      <param name="TicInnerRadius2" value="0.8">                                                                                                       
+                      <param name="TicLabel2" value="0">                                                                                                       
+                      <param name="TicLabelRadius2" value="1">                                                                                                       
+                      <param name="TicLabelRotated2" value="0">                                                                                                       
+                      <param name="TicOuterRadius2" value="0.9">                                                                                                       
+                      <param name="TicScaleID2" value="0">                                                                                                       
+                      <param name="TicStartValue2" value="-80">                                                                                                       
+                      <param name="TicStopValue2" value="80">                                                                                                       
+                      <param name="TicStyle2" value="0">                                                                                                       
+                      <param name="TicWidth2" value="0">                                                                                                       
+                      <param name="TicVisible2" value="-1">                                                                                                       
+                      <param name="TicAutoTic2" value="0">                                                                                                       
+                      <param name="TicCount2" value="6">                                                                                                       
+                      <param name="TicSubCount2" value="0">								                                                             
+                    </OBJECT>                                                                                        
+                    <!-- End of Speed Gauge -->                   
+					</TD>                                                       
+                </TR>                                                       
+                <TR>        
+					<TD> 
+						<B> Required Position:  </B>
+					</TD>        
+					<TD>                                                            
+						<span id="M1_req_position" class="number">  </span> 
+					</TD>        
+					<TD> <B> Actual Position: </B> 
+					</TD>        
+					<TD>                                                            
+                    <span id="M1_act_position" class="number">                                                            
+                    </span>
+					</TD>                                                              
+                </TR>                                                       
+                <TR>                                     
+                  <td colspan=4 >                                                             
+                   
+                  </td>                                                                 
+                </tr>                                               
+              </TABLE>                                                            
+          
+			
+			</fieldset>                                   
+          
+		    <fieldset style="height:240; width:530; position:absolute; top:260px; left:230px"  >                                          
+              <legend class="headline" >M2 Position Control                                           
+              </legend> 
+			
+              <table style="padding:15; position:absolute; top:30px; left:30px">                           
+                      <tr>                                 
+                        <TD style="padding = 4px; text-align:left">                                                                       
+                          <fieldset style="width: 150px; height:162px; position:relative; left:-20; ">                                                                             
+                            <legend class="headline">Position Selector                                                                       
+                            </legend>                                                                             
+                            <table >                                                                                   
+                              <tr>                                                                                         
+                                <td colspan = 2>                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="10" value=Reset></td>                                                                                   
+                              </tr>                                                                                   
+                              <tr>
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="-11" value=-0.1>
+								</td>							  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="11" value= +0.1>
+								</td>                                                                                           
+                                                                                   
+                              </tr>                                                                                   
+                              <tr>  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="-12" value=-1></td>							  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="12" value= +1></td>                                                                                          
+                              </tr>                                                                                   
+                              <tr>  
+                                <td style="padding:2px; padding-left:6px">
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="-13" value=-10></td>                                                                     
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="13" value= +10></td>
+                              </tr>                                                                                      
+                              <tr>  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="-14" value= Min></td>							  
+                                <td style="padding:2px; padding-left:6px">                                                                                        
+                                  <input type=button class="position_button" onClick ="M2_position_button_click(this.id)" id ="14" value= Max></td>
+                              </tr>                                                                                                                                                                       
+                            </table>                                                                       
+                          </fieldset>                                                  
+                        </td>                                                   
+                      
+				
+					  
+					  </tr>               
+                    </table> 
+				  
+              <table style="padding:15; position:absolute; top:10px; left:170px">                                                
+                <TR>                                                      
+                  <TD colspan = 4 style="padding:5px;">                                                                            
+                    <!-- Speed Gauge 14277081-->   	  								                                                             
+                    <OBJECT id="M2_gaugeSPEED" codeBase="agauge.cab" height="180" width="320" classid="clsid:B2E0C2EA-A543-11CF-BC8C-207402C10627" VIEWASTEXT>                                                                                                       
+                      <param name="_">                                                                                                       
+                      <param name="_Version" value="131082">                                                                                                       
+                      <param name="_Version" value="131082">                                                                                                       
+                      <param name="_ExtentX" value="8837">                                                                                                       
+                      <param name="_ExtentY" value="5371">                                                                                                       
+                      <param name="_StockProps" value="70">                                                                                                       
+                      <param name="Caption" value>                                                                                                       
+                      <param name="Enabled" value="-1">                                                                                                       
+                      <param name="BackColor" value="15263713">                                                                                                       
+                      <param name="AutoRedraw" value="-1">                                                                                                       
+                      <param name="BevelInner" value="2">                                                                                                       
+                      <param name="BevelOuter" value="1">                                                                                                       
+                      <param name="BevelWidth" value="1">                                                                                                       
+                      <param name="BorderWidth" value="2">                                                                                                       
+                      <param name="BorderType" value="1">                                                                                                       
+                      <param name="Outline" value="0">                                                                                                       
+                      <param name="OutlineAlign" value="2">                                                                                                       
+                      <param name="OutlineColor" value="0">                                                                                                       
+                      <param name="OutlineTitle" value>                                                                                                       
+                      <param name="OutlineWidth" value="1">                                                                                                       
+                      <param name="FocusOutline" value="0">                                                                                                       
+                      <param name="FrameBottom" value="1.29">                                                                                                       
+                      <param name="FrameColor" value="8421440">                                                                                                       
+                      <param name="FrameLeft" value="-2.25">                                                                                                       
+                      <param name="FrameRight" value="2.25">                                                                                                       
+                      <param name="FrameShape??0" value="0,180, 100,0, 900,0, 1000,180, 1000,820, 900,1000, 100,1000, 0,820">                                                                                                       
+                      <param name="FrameStyle" value="0">                                                                                                       
+                      <param name="FrameTop" value="-1.5">                                                                                                       
+                      <param name="ScaleSize" value="1">                                                                                                       
+                      <param name="ScaleDirection0" value="0">                                                                                                       
+                      <param name="ScaleMaxValue0" value="90">                                                                                                       
+                      <param name="ScaleMinValue0" value="-90">                                                                                                       
+                      <param name="ScaleOriginX0" value="0">                                                                                                       
+                      <param name="ScaleOriginY0" value="-0.45">                                                                                                       
+                      <param name="ScaleStartAngle0" value="245">                                                                                                       
+                      <param name="ScaleStopAngle0" value="115">                                                                                                       
+                      <param name="FontSize" value="2">                                                                                                       
+                      <param name="CaptionSize" value="2">                                                                                                       
+                      <param name="CaptionColor0" value="10485760">                                                                                                       
+                      <param name="CaptionFontID0" value="0">                                                                                                       
+                      <param name="Caption0" value="Position">                                                                                                       
+                      <param name="CaptionX0" value="0">                                                                                                       
+                      <param name="CaptionY0" value="-0.7">                                                                                                       
+                      <param name="CaptionAlign0" value="2">                                                                                                       
+                      <param name="CaptionVisible0" value="-1">                                                                                                       
+                      <param name="CaptionFlag0" value="0">                                                                                                       
+                      <param name="CaptionColor1" value="10485760">                                                                                                       
+                      <param name="CaptionFontID1" value="1">                                                                                                       
+                      <param name="Caption1" value="Rounds">                                                                                                       
+                      <param name="CaptionX1" value="0">                                                                                                       
+                      <param name="CaptionY1" value="-0.9">                                                                                                       
+                      <param name="CaptionAlign1" value="2">                                                                                                       
+                      <param name="CaptionVisible1" value="-1">                                                                                                       
+                      <param name="CaptionFlag1" value="0">                                                                                                       
+                      <param name="AnnularSize" value="4">                                                                                                       
+                      <param name="AnnularColor0" value="60280">                                                                                                       
+                      <param name="AnnularFloat0" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset0" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius0" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius0" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID0" value="0">                                                                                                       
+                      <param name="AnnularStartValue0" value="-90">                                                                                                       
+                      <param name="AnnularStopValue0" value="90">                                                                                                       
+                      <param name="AnnularVisible0" value="-1">                                                                                                       
+                      <param name="AnnularColor1" value="500">                                                                                                       
+                      <param name="AnnularFloat1" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset1" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius1" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius1" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID1" value="0">                                                                                                       
+                      <param name="AnnularStartValue1" value="-10">                                                                                                       
+                      <param name="AnnularStopValue1" value="10">                                                                                                       
+                      <param name="AnnularVisible1" value="-1">                                                                                                       
+                      <param name="AnnularColor2" value="500">                                                                                                       
+                      <param name="AnnularFloat2" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset2" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius2" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius2" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID2" value="0">                                                                                                       
+                      <param name="AnnularStartValue2" value="-90">                                                                                                       
+                      <param name="AnnularStopValue2" value="-80">                                                                                                       
+                      <param name="AnnularVisible2" value="-1">                                                                                                       
+                      <param name="AnnularColor3" value="500">                                                                                                       
+                      <param name="AnnularFloat3" value="0">                                                                                                       
+                      <param name="AnnularFloatOffset3" value="0">                                                                                                       
+                      <param name="AnnularInnerRadius3" value="1.27">                                                                                                       
+                      <param name="AnnularOuterRadius3" value="1.35">                                                                                                       
+                      <param name="AnnularScaleID3" value="0">                                                                                                       
+                      <param name="AnnularStartValue3" value="80">                                                                                                       
+                      <param name="AnnularStopValue3" value="90">                                                                                                       
+                      <param name="AnnularVisible3" value="-1">                                                                                                       
+                      <param name="HubSize" value="2">                                                                                                       
+                      <param name="HubColor0" value="12632256">                                                                                                       
+                      <param name="HubRadius0" value="0.119">                                                                                                       
+                      <param name="HubScaleID0" value="0">                                                                                                       
+                      <param name="HubStyle0" value="0">                                                                                                       
+                      <param name="HubVisible0" value="-1">                                                                                                       
+                      <param name="HubColor1" value="9539985">                                                                                                       
+                      <param name="HubRadius1" value="0.089">                                                                                                       
+                      <param name="HubScaleID1" value="0">                                                                                                       
+                      <param name="HubStyle1" value="0">                                                                                                       
+                      <param name="HubVisible1" value="-1">                                                                                                       
+                      <param name="NeedleSize" value="2">                                                                                                                                            
+                      <param name="NeedleColor0" value="0">                                                                                                       
+                      <param name="NeedleDigital0" value="0">                                                                                                       
+                      <param name="NeedleDigitalColor0" value="0">                                                                                                       
+                      <param name="NeedleDigitalDecimals0" value="0">                                                                                                       
+                      <param name="NeedleDigitalFontID0" value="0">                                                                                                       
+                      <param name="NeedleDigitalX0" value="0">                                                                                                       
+                      <param name="NeedleDigitalY0" value="-0.68">                                                                                                       
+                      <param name="NeedleLength0" value="1.2">                                                                                                       
+                      <param name="NeedleMouseControl0" value="0">                                                                                                       
+                      <param name="NeedleScaleID0" value="0">                                                                                                       
+                      <param name="NeedleShape??0" value>                                                                                                       
+                      <param name="NeedleStyle0" value="1">                                                                                                       
+                      <param name="NeedleValue0" value="0">                                                                                                       
+                      <param name="NeedleWidth0" value="0.1">                                                                                                       
+                      <param name="NeedleVisible0" value="-1">                                                                                                       
+                      <param name="NeedleClip0" value="-1">                                                                                                                                                                                 
+                      <param name="NeedleColor1" value="16711680">                                                                                                       
+                      <param name="NeedleDigital1" value="1">                                                                                                       
+                      <param name="NeedleDigitalColor1" value="16711680">                                                                                                       
+                      <param name="NeedleDigitalDecimals1" value="0">                                                                                                       
+                      <param name="NeedleDigitalFontID1" value="0">                                                                                                       
+                      <param name="NeedleDigitalX1" value="0">                                                                                                       
+                      <param name="NeedleDigitalY1" value="0">                                                                                                       
+                      <param name="NeedleLength1" value="0.8">                                                                                                       
+                      <param name="NeedleMouseControl1" value="2">                                                                                                       
+                      <param name="NeedleScaleID1" value="0">                                                                                                       
+                      <param name="NeedleShape??1" value>                                                                                                       
+                      <param name="NeedleStyle1" value="1">                                                                                                       
+                      <param name="NeedleValue1" value="0">                                                                                                       
+                      <param name="NeedleWidth1" value="0.1">                                                                                                       
+                      <param name="NeedleVisible1" value="-1">                                                                                                       
+                      <param name="NeedleClip1" value="-1">                                                                                                                                                                                 
+                      <param name="TicSize" value="3">                                                                                                       
+                      <param name="TicColor0" value="0">                                                                                                       
+                      <param name="TicFloat0" value="0">                                                                                                       
+                      <param name="TicDeltaValue0" value="10">                                                                                                       
+                      <param name="TicFloatOffset0" value="0">                                                                                                       
+                      <param name="TicFontID0" value="0">                                                                                                       
+                      <param name="TicInnerRadius0" value="1.27">                                                                                                       
+                      <param name="TicLabel0" value="-1">                                                                                                       
+                      <param name="TicLabelRadius0" value="1.63">                                                                                                       
+                      <param name="TicLabelRotated0" value="0">                                                                                                       
+                      <param name="TicOuterRadius0" value="1.47">                                                                                                       
+                      <param name="TicScaleID0" value="0">                                                                                                       
+                      <param name="TicStartValue0" value="-80">                                                                                                       
+                      <param name="TicStopValue0" value="80">                                                                                                       
+                      <param name="TicStyle0" value="0">                                                                                                       
+                      <param name="TicWidth0" value="0">                                                                                                       
+                      <param name="TicVisible0" value="-1">                                                                                                       
+                      <param name="TicAutoTic0" value="0">                                                                                                       
+                      <param name="TicCount0" value="6">                                                                                                       
+                      <param name="TicSubCount0" value="0">                                                                                                       
+                      <param name="TicColor1" value="0">                                                                                                       
+                      <param name="TicFloat1" value="0">                                                                                                       
+                      <param name="TicDeltaValue1" value="2">                                                                                                       
+                      <param name="TicFloatOffset1" value="0">                                                                                                       
+                      <param name="TicFontID1" value="0">                                                                                                       
+                      <param name="TicInnerRadius1" value="1.27">                                                                                                       
+                      <param name="TicLabel1" value="0">                                                                                                       
+                      <param name="TicLabelRadius1" value="1">                                                                                                       
+                      <param name="TicLabelRotated1" value="0">                                                                                                       
+                      <param name="TicOuterRadius1" value="1.35">                                                                                                       
+                      <param name="TicScaleID1" value="0">                                                                                                       
+                      <param name="TicStartValue1" value="-90">                                                                                                       
+                      <param name="TicStopValue1" value="90">                                                                                                       
+                      <param name="TicStyle1" value="0">                                                                                                       
+                      <param name="TicWidth1" value="0">                                                                                                       
+                      <param name="TicVisible1" value="-1">                                                                                                       
+                      <param name="TicAutoTic1" value="0">                                                                                                       
+                      <param name="TicCount1" value="6">                                                                                                       
+                      <param name="TicSubCount1" value="0">                                                                                                       
+                      <param name="TicColor2" value="0">                                                                                                       
+                      <param name="TicFloat2" value="0">                                                                                                       
+                      <param name="TicDeltaValue2" value="2">                                                                                                       
+                      <param name="TicFloatOffset2" value="0">                                                                                                       
+                      <param name="TicFontID2" value="0">                                                                                                       
+                      <param name="TicInnerRadius2" value="0.8">                                                                                                       
+                      <param name="TicLabel2" value="0">                                                                                                       
+                      <param name="TicLabelRadius2" value="1">                                                                                                       
+                      <param name="TicLabelRotated2" value="0">                                                                                                       
+                      <param name="TicOuterRadius2" value="0.9">                                                                                                       
+                      <param name="TicScaleID2" value="0">                                                                                                       
+                      <param name="TicStartValue2" value="-80">                                                                                                       
+                      <param name="TicStopValue2" value="80">                                                                                                       
+                      <param name="TicStyle2" value="0">                                                                                                       
+                      <param name="TicWidth2" value="0">                                                                                                       
+                      <param name="TicVisible2" value="-1">                                                                                                       
+                      <param name="TicAutoTic2" value="0">                                                                                                       
+                      <param name="TicCount2" value="6">                                                                                                       
+                      <param name="TicSubCount2" value="0">								                                                             
+                    </OBJECT>                                                                                        
+                    <!-- End of Speed Gauge -->                   
+					</TD>                                                       
+                </TR>                                                       
+                <TR>        
+					<TD> 
+						<B> Required Position:  </B>
+					</TD>        
+					<TD>                                                            
+						<span id="M2_req_position" class="number">  </span> 
+					</TD>        
+					<TD> <B> Actual Position: </B> 
+					</TD>        
+					<TD>                                                            
+                    <span id="M2_act_position" class="number">                                                            
+                    </span>
+					</TD>                                                              
+                </TR>                                                       
+                <TR>                                     
+                  <td colspan=4 >                                                             
+                   
+                  </td>                                                                 
+                </tr>                                               
+              </TABLE>                                                            
+          
+			
+			</fieldset> 
+		  
+		  </div>                              
+          <!------------------------------------------2nd TAB---------------------------------------------------->                                
+          <div class="hide" id="textB" style="visibility: hidden">                                       
+            <div style="position:absolute; top:10; left:10;font-size:12px;height:800">                                           
+              <img align="middle" src="block pmsm.png" style=" width: 750px; position:relative; left:0">
+            </div>                              
+          </div>                              
+        </td>  
+
+			 
+      </tr>  
+
+	  <TR>
+	  
+	  		  <!--------------------------------------  bottom copyright note   ------------------------------------->                                     
+         <div id="ftr" border="0" style="position:relative; top:640; left:20; background-color:eef2f3; border-style:none">		 
+              <center>&copy; NXP Semiconductor. Designed by China Motor Control and Power Conversion Team / Microcontroller Group                           
+              </center>                   
+         </div> 
+	  
+	  </tr>
+
+	  
+    </Table>              
+    <!-- End of main table-->           
+  </BODY>        
+  <!-- --------------------- scripts section  --------------------- -->   
+<SCRIPT LANGUAGE="VBScript">
+  
+
+</script>   
+<script type="text/javascript">
+// global variables
+var fault = 0;
+var after_fault = 0;
+var demo_mode = 0;
+var rawa = 0;
+var rawb = 0;
+var value = 0;
+var i =0;
+//------------------------------------------------------------------------------
+function tabs(view,hideA,index)
+{
+    view.style.visibility = "visible";
+    view.style.display = "block";
+    hideA.style.visibility = "hidden";
+    hideA.style.display = "none";
+ 
+    for (i=1;i<=2;i++)
+    { 
+      aux = document.getElementById("visible_"+i);     
+      aux.style.visibility = "hidden";     
+      if (index == i)
+      {
+        aux.style.visibility = "visible";
+      } 
+    }   
+}
+
+function Disable_position_bottons()
+{
+	document.getElementById("0").disabled = true;      
+	document.getElementById("1").disabled = true;
+	document.getElementById("2").disabled = true;
+	document.getElementById("3").disabled = true;
+	document.getElementById("4").disabled = true;
+	document.getElementById("-1").disabled = true;
+	document.getElementById("-2").disabled = true;
+	document.getElementById("-3").disabled = true;
+	document.getElementById("-4").disabled = true;
+	
+	document.getElementById("10").disabled = true;      
+	document.getElementById("11").disabled = true;
+	document.getElementById("12").disabled = true;
+	document.getElementById("13").disabled = true;
+	document.getElementById("14").disabled = true;
+	document.getElementById("-11").disabled = true;
+	document.getElementById("-12").disabled = true;
+	document.getElementById("-13").disabled = true;
+	document.getElementById("-14").disabled = true;
+}
+
+function Enable_position_bottons()
+{
+	document.getElementById("0").disabled = false;      
+	document.getElementById("1").disabled = false;
+	document.getElementById("2").disabled = false;
+	document.getElementById("3").disabled = false;
+	document.getElementById("4").disabled = false;
+	document.getElementById("-1").disabled = false;
+	document.getElementById("-2").disabled = false;
+	document.getElementById("-3").disabled = false;
+	document.getElementById("-4").disabled = false;
+	
+	document.getElementById("10").disabled = false;      
+	document.getElementById("11").disabled = false;
+	document.getElementById("12").disabled = false;
+	document.getElementById("13").disabled = false;
+	document.getElementById("14").disabled = false;
+	document.getElementById("-11").disabled = false;
+	document.getElementById("-12").disabled = false;
+	document.getElementById("-13").disabled = false;
+	document.getElementById("-14").disabled = false;
+}
+//------------------------------------------------------------------------------
+function Start_stop_click()
+{
+    aux = document.getElementById("start_stop_BTN");
+    if (aux.value == "Start")
+	{
+		write_fmaster_variable("i16HtmlSwitch","1");
+		
+      //read_variable("gsM1_Ctrl.eState", value);
+      //if (value == 2)
+      //{
+      //  aux.value = "Stop"
+      //  aux.style.color = "red";        
+      //}
+    }
+    else{
+      aux.value = "Start"
+      aux.style.color = "green";
+      write_fmaster_variable("i16HtmlSwitch","0");
+      if (demo_mode == 1)
+        demo_click();
+      // disable buttons for direct position setting in stop mode
+		Disable_position_bottons();
+      // disable demo button 
+      document.getElementById("demo_BTN").disabled = true;        
+      
+    }
+    
+}
+//--------------------------------------------------------------------------
+function M1_position_button_click(source)
+{
+      write_fmaster_variable("i16HtmlM1Flag",source);  
+}
+
+//--------------------------------------------------------------------------
+function M2_position_button_click(source)
+{
+      write_fmaster_variable("i16HtmlM2Flag",source);  
+}
+
+//--------------------------------------------------------------------------
+function timer_proc()
+{
+	//-- M1 Speed gauge strip 
+ read_variable("M1_Position", value);
+		M1_gaugeSPEED.NeedleID = 0;
+		M1_gaugeSPEED.NeedleValue = value.toFixed(1);
+    document.getElementById("M1_act_position").innerHTML = value.toFixed(2); 
+//		 stripSpeed.AddY(0, value);		
+	read_variable("gsM1_Drive.SPosCtrl.i32PosDesired", value);
+		M1_gaugeSPEED.NeedleID = 1;
+		M1_gaugeSPEED.NeedleValue = value.toFixed(1);
+    document.getElementById("M1_req_position").innerHTML = value.toFixed(2);
+    
+		//-- M2 Speed gauge strip 
+ read_variable("M2_Position", value);
+		M2_gaugeSPEED.NeedleID = 0;
+		M2_gaugeSPEED.NeedleValue = value.toFixed(1);
+    document.getElementById("M2_act_position").innerHTML = value.toFixed(2); 
+//		 stripSpeed.AddY(0, value);		
+	read_variable("gsM2_Drive.SPosCtrl.i32PosDesired", value);
+		M2_gaugeSPEED.NeedleID = 1;
+		M2_gaugeSPEED.NeedleValue = value.toFixed(1);
+    document.getElementById("M2_req_position").innerHTML = value.toFixed(2);
+ 
+// M1 faults visualizaiton    
+  read_variable("gsM1_Drive.sFaultIdPending", value);
+  if(value == 0)
+  {
+      document.getElementById("M1_over_current_led").src = "led_off01.bmp";
+      document.getElementById("under_DCB_led").src = "led_off01.bmp";
+      document.getElementById("over_DCB_led").src = "led_off01.bmp";
+  }
+    if (value & 0x1)  
+      document.getElementById("M1_over_current_led").src = "led_red01.bmp";    
+    
+    if (value & 0x2)
+      document.getElementById("under_DCB_led").src = "led_red01.bmp";    
+    
+    if (value & 0x4)
+      document.getElementById("over_DCB_led").src = "led_red01.bmp";  
+	  
+	// M2 faults visualizaiton    
+  read_variable("gsM2_Drive.sFaultIdPending", value);
+  if(value == 0)
+  {
+      document.getElementById("M2_over_current_led").src = "led_off01.bmp";
+      document.getElementById("under_DCB_led").src = "led_off01.bmp";
+      document.getElementById("over_DCB_led").src = "led_off01.bmp";
+  }
+    if (value & 0x1)  
+      document.getElementById("M2_over_current_led").src = "led_red01.bmp";    
+    
+    if (value & 0x2)
+      document.getElementById("under_DCB_led").src = "led_red01.bmp";    
+    
+    if (value & 0x4)
+      document.getElementById("over_DCB_led").src = "led_red01.bmp"; 
+   
+// update application switch button
+// it has to be called in longer periode, otherwise it overwrites the manual setting
+	read_variable("mbM1_SwitchAppOnOff", value);
+	//read_variable("mbM2_SwitchAppOnOff", rawb);
+	
+    aux = document.getElementById("start_stop_BTN");
+    if (value == 1)
+	{
+      aux.value = "Stop"
+      aux.style.color = "red";
+    }
+    else{
+      aux.value = "Start"
+      aux.style.color = "green";
+    }	
+    read_variable("gsM1_Ctrl.eState",value);
+    aux = document.getElementById("app_status");
+    switch (value){
+    case 0:{
+      aux.innerText = "FAULT"
+      aux.className = "fault";
+      if (demo_mode == 1)
+      demo_click(); //if app is in the demo mode, the demo mode will be turned off
+      // disable buttons for direct position setting in fault mode
+		Disable_position_bottons();
+      // disable demo button and start button
+      document.getElementById("start_stop_BTN").disabled = true; 
+      document.getElementById("demo_BTN").disabled = true;  
+      fault = 1; 
+      after_fault = 1;                
+      break;
+    }
+    case 1:{
+      aux.innerText = "INIT"
+      aux.className = "init";
+      fault = 0;
+      break;
+    }
+    case 2:{
+      aux.innerText = "STOP"
+      aux.className = "stop";
+      // disable buttons for direct position setting in stop mode
+		Disable_position_bottons();
+      // disable demo button 
+      document.getElementById("demo_BTN").disabled = true;  
+      document.getElementById("demo_BTN").value = "X-Y Graph ON";
+      document.getElementById("demo_BTN").style.color = "green";
+      document.getElementById("demo_led").src="led_off01.bmp";
+      demo_mode = 0;    
+      fault = 0;
+      break;
+    }
+    case 3:
+    default:{
+      aux.innerText = "RUNNING"
+      aux.className = "run";
+      fault = 0;
+      // enable buttons for direct position setting in run mode
+      if (!demo_mode)
+      {
+		Enable_position_bottons();
+      }
+      // enable demo button  
+      document.getElementById("demo_BTN").disabled = false;       
+      break;
+    }
+    }
+    if ((!fault) && (after_fault)){
+      // enable start button  after fault
+      document.getElementById("start_stop_BTN").disabled = false; 
+      after_fault = 0;   
+    }
+	
+    //read_variable("w16AxisFlag",value);
+    //demo_mode = value;
+    //update_demo_button();
+}
+//-----------------------------------------------------------------------------
+function update_demo_button()
+{
+  if (demo_mode == 1)
+  {
+    read_variable("gsM1_Ctrl.eState",value);
+    if (value ==  3)
+    {
+      document.getElementById("demo_led").src="led_green01.bmp";
+      document.getElementById("demo_BTN").value = "X-Y Graph OFF";
+      document.getElementById("demo_BTN").style.color = "red";
+      // disable buttons for direct position setting in demo mode
+		Disable_position_bottons();  
+    }
+  }
+  else 
+    {
+      document.getElementById("demo_led").src="led_off01.bmp";
+      document.getElementById("demo_BTN").value = "X-Y Graph ON";
+      document.getElementById("demo_BTN").style.color = "green";  
+      // reenable buttons for direct position setting
+		Enable_position_bottons();	  
+    }  
+}
+//-----------------------------------------------------------------------------
+function demo_click()
+{
+  if (demo_mode == 0)
+  {
+    read_variable("gsM1_Ctrl.eState",value);
+    if (value ==  3)
+    {
+      demo_mode = 1;
+      document.getElementById("demo_led").src="led_green01.bmp";
+      document.getElementById("demo_BTN").value = "X-Y Graph OFF";
+      document.getElementById("demo_BTN").style.color = "red";
+      write_fmaster_variable("i16AxisFlag","1");
+      //write_fmaster_variable("SpeedStimulatorCnt","0");
+      // disable buttons for direct position setting in demo mode
+		Disable_position_bottons(); 	  
+    }
+  }
+  else 
+    {
+      demo_mode = 0;
+      document.getElementById("demo_led").src="led_off01.bmp";
+      document.getElementById("demo_BTN").value = "X-Y Graph ON";
+      document.getElementById("demo_BTN").style.color = "green";  
+      write_fmaster_variable("i16AxisFlag","0");
+      //write_fmaster_variable("Speed Required",0);
+      // reenable buttons for direct position setting
+		Enable_position_bottons();
+    }  
+}
+
+//-----------------------------------------------------------------------------  
+// display FreeMASTER error 
+function set_fmaster_err(err)
+{
+    fmstr_led.src = err ? "led_red01.bmp" : "led_off01.bmp";
+}
+  
+//-----------------------------------------------------------------------------
+function start_the_page()
+{
+  setInterval(timer_proc, 500);
+  
+  var succ = FreeMaster.SelectItem("X-Y Graph", "scope");
+  set_fmaster_err(!succ);
+}
+//----------------------------------------------------------------------------
+//--------------   FreeMASTER communication functions   ----------------------
+//----------------------------------------------------------------------------
+function write_fmaster_variable(varname, value)
+{
+    var succ = FreeMaster.WriteVariable(varname, value);
+    set_fmaster_err(!succ);
+}
+//-----------------------------------------------------------------------------
+function read_variable(varname)
+{
+    var succ = read_fmaster_variable(varname);
+    if(succ)
+   {
+        value = FreeMaster.LastVariable_vValue;  
+  }
+  set_fmaster_err(!succ);
+}
+   
+//------------------------------------------------------------------------------
+function read_fmaster_variable(varname)
+{
+    var succ = FreeMaster.ReadVariable("!" + varname);
+    return succ;
+}  
+</script>       
+</HTML>

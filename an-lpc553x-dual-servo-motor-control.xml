@@ -1,0 +1,27 @@
+<data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" id="an-lpc553x-dual-servo-motor-control" type="app_note" format="projectfile" name="LPC553x dual-servo motor control">
+    <overview>
+        <![CDATA[<div>This application note describes the dual servo demo with the NXP LPC55S36&nbsp;<span style="background-color: rgb(255 255 255/var(--tw-bg-opacity)); color: var(--tw-prose-body); font-size: 1rem;">processor. It also can be used as a reference for motor control application&nbsp;</span><span style="background-color: rgb(255 255 255/var(--tw-bg-opacity)); color: var(--tw-prose-body); font-size: 1rem;">developing based on other products.</span></div>]]>
+    </overview>
+    <toolchains>
+        <toolchain name="iar"></toolchain>
+    </toolchains>
+    <families>
+        <family name="lpc"></family>
+    </families>
+    <nxp_compatible_hw>
+        <hw id="LPCXpresso55S36"></hw>
+    </nxp_compatible_hw>
+    <nxp_ebh_hw>
+        <ebh id="nxp_frdm_mc_lvpmsm"></ebh>
+    </nxp_ebh_hw>
+    <peripherals>
+        <peripheral name="adc"></peripheral>
+        <peripheral name="gpio"></peripheral>
+        <peripheral name="clocks"></peripheral>
+        <peripheral name="pwm"></peripheral>
+        <peripheral name="uart"></peripheral>
+    </peripherals>
+    <categories>
+        <category name="motor_control"></category>
+    </categories>
+</data:item>
