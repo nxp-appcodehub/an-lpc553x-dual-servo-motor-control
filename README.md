@@ -39,7 +39,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 •  Flexcomm provides various peripheral function options that can be configured into USART, SPI, I2C, I2S functions through software. Here we configure the USART function to realize the communication between the FreeMASTER debugging tool and LPC553x/LPC55S3x to demonstrate the user's operation.
 
-<img src="C:\Users\nxf64158\AppData\Roaming\Typora\typora-user-images\image-20230606112218432.png" alt="image-20230606112218432" style="zoom:67%;" />
+<img src="picture/system structure.png" style="zoom:20%;" />
 
 ## 2. Software
 
@@ -65,7 +65,7 @@ IAR Workbench IDE 8.50.9
 
 1. Plug the LPCXpresso55S36 and FRDM-MC-LVPMSM board together via Arduino interface, connect motor wires and encoder interface.
 
-   ![image-20230605163142327](C:\Users\nxf64158\AppData\Roaming\Typora\typora-user-images\image-20230605163142327.png)
+   <img src="picture/evk front.png" style="zoom:20%;" />
 
 2. Power on 24 V adapter to power on the FRDM-MC-LVPMSM board.
 
@@ -75,7 +75,7 @@ IAR Workbench IDE 8.50.9
 
 5. Click the GO! button to enable the communication between PC and LPC553x/LPC55S3x.
 
-   ![image-20230605163205641](C:\Users\nxf64158\AppData\Roaming\Typora\typora-user-images\image-20230605163205641.png)
+   <img src="picture/FreeMASTER control page.png" style="zoom:100%;" />
 
 6. Click the DualServo page.
 
@@ -89,11 +89,11 @@ All the following experimental results are tested when the motor is loaded with 
 
 Below figure shows the speed and current waveforms when the motor startup is at 2500 RPM. The red line is speed requirement, the green line is actual speed, and blue line is torque current. We can see that it can accelerate to 2500 RPM within 0.13 s, and the overshoot is very small.
 
-![image-20230606111906501](C:\Users\nxf64158\AppData\Roaming\Typora\typora-user-images\image-20230606111906501.png)
+![](picture/speed and current response.png)
 
 As shown in [Figure 18](#_bookmark22), the top waveforms show the speed response and the bottom waveforms show the position response. The red line is the requirement, the green line is the actual value, and the blue line shows the error between them. After setting the 180o position requirement, it takes about 0.1 seconds to reach the desired position. We can see that the error of dynamic response is small and the static response is very stable.
 
-![image-20230606111842243](C:\Users\nxf64158\AppData\Roaming\Typora\typora-user-images\image-20230606111842243.png)
+![](picture/Position and speed response.png)
 
 Please refer to the application note for the details: https://www.nxp.com.cn/docs/en/application-note/AN13569.pdf
 
