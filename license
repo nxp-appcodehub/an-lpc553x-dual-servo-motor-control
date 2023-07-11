@@ -1,0 +1,54 @@
+LA_OPT_NXP_Software_License v44 March 2023 
+IMPORTANT.  Read the following NXP Software License Agreement (“Agreement”) completely. By selecting the “I Accept” button at the end of this page, or by downloading, installing, or using the Licensed Software, you indicate that you accept the terms of the Agreement, and you acknowledge that you have the authority, for yourself or on behalf of your company, to bind your company to these terms. You may then download or install the file. In the event of a conflict between the terms of this Agreement and any license terms and conditions for NXP’s proprietary software embedded anywhere in the Licensed Software file, the terms of this Agreement shall control.  If a separate license agreement for the Licensed Software has been signed by you and NXP, then that agreement shall govern your use of the Licensed Software and shall supersede this Agreement.
+
+NXP SOFTWARE LICENSE AGREEMENT
+This is a legal agreement between your employer, of which you are an authorized representative, or, if you have no employer, you as an individual (“you” or “Licensee”), and NXP B.V. (“NXP”).  It concerns your rights to use the software provided to you in binary or source code form and any accompanying written materials (the “Licensed Software”). The Licensed Software may include any updates or error corrections or documentation relating to the Licensed Software provided to you by NXP under this Agreement. In consideration for NXP allowing you to access the Licensed Software, you are agreeing to be bound by the terms of this Agreement. If you do not agree to all of the terms of this Agreement, do not download or install the Licensed Software. If you change your mind later, stop using the Licensed Software and delete all copies of the Licensed Software in your possession or control. Any copies of the Licensed Software that you have already distributed, where permitted, and do not destroy will continue to be governed by this Agreement. Your prior use will also continue to be governed by this Agreement.
+1.       DEFINITIONS
+1.1.         “Affiliate” means, with respect to a party, any corporation or other legal entity that now or hereafter Controls, is Controlled by or is under common Control with such party; where “Control” means the direct or indirect ownership of greater than fifty percent (50%) of the shares or similar interests entitled to vote for the election of directors or other persons performing similar functions. An entity is considered an Affiliate only so long as such Control exists.
+1.2	“Authorized System” means either (i) Licensee’s hardware product which incorporates an NXP Product or (ii) Licensee’s software program which is used exclusively in connection with an NXP Product and with which the Licensed Software will be integrated.      
+1.3.	“Derivative Work” means a work based upon one or more pre-existing works.  A work consisting of editorial revisions, annotations, elaborations, or other modifications which, as a whole, represent an original work of authorship, is a Derivative Work.         
+1.4	“Intellectual Property Rights” means any and all rights under statute, common law or equity in and under copyrights, trade secrets, and patents (including utility models), and analogous rights throughout the world, including any applications for and the right to apply for, any of the foregoing.
+1.5	“NXP Product” means a hardware product (e.g. a microprocessor, microcontroller, sensor or digital signal processor) and/or services (e.g. cloud platform services) supplied directly or indirectly from NXP or an NXP Affiliate, unless there is a product specified in the Software Content Register, in which case this definition is limited to such product.
+1.6      “Software Content Register” means the documentation which may accompany the Licensed Software which identifies the contents of the Licensed Software, including but not limited to identification of any Third Party Software, if any, and may also contain other related information as whether the license in 2.3 is applicable. 
+1.7     “Third Party Software” means, any software included in the Licensed Software that is not NXP proprietary software, and is not open source software, and to which different license terms may apply. 
+2.       LICENSE GRANT.  
+2.1.         If you are not expressly granted the distribution license in Section 2.3 in the Software Content Register, then you are only granted the rights in Section 2.2 and not in 2.3.  If you are expressly granted the distribution license in Section 2.3 in the Software Content Register, then you are granted the rights in both Section 2.2 and 2.3.
+2.2.	Standard License.  Subject to the terms and conditions of this Agreement, NXP grants you a worldwide, personal, non-transferable, non-exclusive, non-sublicensable license, solely for the development of an Authorized System:
+(a)	to use and reproduce the Licensed Software (and its Derivative Works prepared under the license in Section 2.2(b)
+
+APPENDIX A
+Other License Grants and Restrictions:
+
+The Licensed Software may include some or all of the following software, which is either 1) Third Party Software or 2) NXP proprietary software subject to different terms than those in the Agreement. If the Software Content Register that accompanies the Licensed Software identifies any of the following Third Party Software or specific components of the NXP proprietary software, the following terms apply to the extent they deviate from the terms in the Agreement:
+
+Airbiquity Inc.: The Airbiquity software may only be used in object code and Licensee may not sublicense the Airbiquity software to any third party. Licensee’s license to use the Airbiquity software expires on June 30, 2023.
+
+Amazon: Use of the Amazon software constitutes your acceptance of the terms of the Amazon Program Materials License Agreement (including the AVS Component Schedule, if applicable), located at https://developer.amazon.com/support/legal/pml.  All Amazon software is hereby designated “Amazon confidential”.  With the exception of the binary library of the Amazon Wake Word Engine for “Alexa”, all Amazon software is also hereby designated as “Restricted Program Materials”. Amazon is a third-party beneficiary to this Agreement with respect to the Amazon software.
+
+Amazon Web Services, Inc.: AWS is an intended third-party beneficiary to this Agreement with respect to the Greengrass software. If you have an account with AWS that is not in good standing, you may not download, install, use or distribute the Greengrass software. You will comply with all instructions and requirements in any integration documents, guidelines, or other documentation AWS provides. The license to the Greengrass software will immediately terminate without notice if you (a) fail to comply with this Agreement or any other agreement with AWS, (b) fail to make timely payment for any AWS service, (c) fail to implement AWS updates, or (d) bring any action for intellectual property infringement against AWS or any AWS customer utilizing AWS services.  Any dispute or claim relating to your use of the Greengrass software will be resolved by binding arbitration, rather than in court, except that you may assert claims in small claims court if your claims qualify.
+
+Amazon: AWS Fleetwise software must be used consistent with the terms found here: https://github.com/aws/aws-iot-fleetwise-edge/blob/main/LICENSE.
+
+Amphion Semiconductor Ltd.: Distribution of Amphion software must be a part of, or embedded within, Authorized Systems that include an Amphion Video Decoder.  
+
+Apple Mfi Software Development Kit: Use of Apple Mfi Software and associated documentation is restricted to current Apple Mfi licensees in accordance with the terms of their own valid and in-effect license from Apple.
+
+Aquantia Corp.: You may use Aquantia’s API binaries solely to flash the API software to an NXP Product which mates with an Aquantia device.
+
+Argus Cyber Security: The Argus software may only be used in object code and only for evaluation and demonstration purposes.
+
+Atheros: Use of Atheros software is limited to evaluation and demonstration only.  Permitted distributions must be similarly limited. Further rights must be obtained directly from Atheros.    
+
+ATI (AMD): Distribution of ATI software must be a part of, or embedded within, Authorized Systems that include a ATI graphics processor core.  
+
+Au-Zone Technologies: eIQ Portal, Model Tool, DeepViewRT and ModelRunner are distributed by NXP under license from Au-Zone Technologies.  Your use of the Licensed Software, examples and related documentation is subject to the following:
+(1)          Use of Software is limited to Authorized System only
+(2)          In no event may Licensee Sublicense the Software
+(3)          AU-ZONE TECHNOLOGIES SHALL NOT BE LIABLE FOR USE OF LICENSED SOFTWARE IN CRITICAL APPLICATIONS BY LICENSEE
+
+
+Broadcom Corporation: Your use of Broadcom Corporation software is restricted to Authorized Systems that incorporate a compatible integrated circuit device manufactured or sold by Broadcom.
+
+Cadence Design Systems: Use of Cadence audio codec software is limited to distribution only of one copy per single NXP Product. The license granted herein to the Cadence Design Systems HiFi aacPlus Audio Decoder software does not include a license to the AAC family of technologies which you or your customer may need to obtain. Configuration tool outputs may only be distributed by licensees of the relevant Cadence SDK and distribution is limited to distribution of one copy embedded in a single NXP Product. Your use of Cadence NatureDSP Libraries whether in source code or in binary is restricted to NXP SoC based systems or emulation enablement based on NXP SoC.
+
+CEVA D.S.P. Ltd. And CEVA Technologies Inc. (“CEVA”): The CEVA-SPF2 linear algebra, CEVA-SPF2 Neural Network Libraries, CEVA-SPF2 Core Libraries, CEVA-SPF2 OpenAMP and CEVA-SPF2 STL licensed modules are owned by CEVA and such mat
