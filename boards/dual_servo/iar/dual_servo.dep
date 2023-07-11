@@ -5,235 +5,190 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\..\pin_mux.h</file>
-            <file>$PROJ_DIR$\..\clock_config.h</file>
-            <file>$PROJ_DIR$\..\pin_mux.c</file>
-            <file>$PROJ_DIR$\..\board.h</file>
-            <file>$PROJ_DIR$\..\peripherals.c</file>
-            <file>$PROJ_DIR$\..\peripherals.h</file>
-            <file>$PROJ_DIR$\..\board.c</file>
-            <file>$PROJ_DIR$\..\clock_config.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common.c</file>
-            <file>$PROJ_DIR$\..\..\..\components\uart\fsl_adapter_usart.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_lpadc.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_ctimer.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_dac.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_flexcomm.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\system_LPC55S36.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_clock.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_inputmux.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_pint.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_gpio.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_power.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common_arm.c</file>
-            <file>$PROJ_DIR$\..\..\..\components\serial_manager\fsl_component_serial_port_uart.c</file>
             <file>$PROJ_DIR$\..\..\..\components\lists\fsl_component_generic_list.c</file>
             <file>$PROJ_DIR$\..\..\..\components\serial_manager\fsl_component_serial_manager.c</file>
-            <file>$PROJ_DIR$\..\mc_drivers\mcdrv_enc_lpc55s36.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_net.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_protocol.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_utils.c</file>
-            <file>$PROJ_DIR$\..\motor_control\M1_statemachine.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pipes.c</file>
-            <file>$PROJ_DIR$\..\motor_control\M1_statemachine.h</file>
-            <file>$PROJ_DIR$\..\motor_control\M2_statemachine .c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pdbdm.c</file>
-            <file>$PROJ_DIR$\..\mc_drivers\mcdrv_adc_lpc55s36.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_rec.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_scope.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_sha.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_ures.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_serial.c</file>
-            <file>$PROJ_DIR$\..\mc_drivers\mcdrv_eflexpwm_lpc.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_tsa.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_appcmd.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_can.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usart.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_usart.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpuart.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_tcp.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_reset.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_uart.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usb.c</file>
+            <file>$PROJ_DIR$\..\..\..\components\serial_manager\fsl_component_serial_port_uart.c</file>
+            <file>$PROJ_DIR$\..\..\..\components\uart\fsl_adapter_usart.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\system_LPC55S36.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common_arm.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_ctimer.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_dac.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_pint.c</file>
             <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_flexcan.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common.c</file>
             <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_mcan.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_inputmux.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_usart.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_clock.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_flexcomm.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_lpadc.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_power.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_reset.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpuart.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_protocol.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_net.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_tcp.c</file>
             <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_udp.c</file>
             <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpsci.c</file>
-            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_mscan.c</file>
             <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_miniusart.c</file>
-            <file>$PROJ_DIR$\..\motor_control\motor_def.h</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_uart.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usb.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usart.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_appcmd.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_can.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_mscan.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pdbdm.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pipes.c</file>
+            <file>$PROJ_DIR$\..\mc_drivers\mcdrv_adc_lpc55s36.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_scope.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_serial.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_tsa.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_sha.c</file>
+            <file>$PROJ_DIR$\..\mc_drivers\mcdrv_enc_lpc55s36.c</file>
+            <file>$PROJ_DIR$\..\motor_control\M1_statemachine.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_rec.c</file>
             <file>$PROJ_DIR$\..\motor_control\motor_structure.c</file>
-            <file>$PROJ_DIR$\..\mc_periph_init.h</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\debug_console\fsl_debug_console.c</file>
-            <file>$PROJ_DIR$\..\motor_control\M2_statemachine.h</file>
-            <file>$PROJ_DIR$\..\motor_control\register_types.h</file>
-            <file>$PROJ_DIR$\..\motor_control\state_machine.h</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\fsl_assert.c</file>
             <file>$PROJ_DIR$\..\motor_control\state_machine.c</file>
-            <file>$PROJ_DIR$\..\char_pwrstg.h</file>
-            <file>$PROJ_DIR$\..\motor_control\motor_structure.h</file>
+            <file>$PROJ_DIR$\..\mc_drivers\mcdrv_eflexpwm_lpc.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_ures.c</file>
+            <file>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_utils.c</file>
+            <file>$PROJ_DIR$\..\motor_control\M2_statemachine .c</file>
             <file>$PROJ_DIR$\..\freemaster_cfg.h</file>
-            <file>$PROJ_DIR$\..\main.c</file>
-            <file>$PROJ_DIR$\..\mc_periph_init.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\str\fsl_str.c</file>
-            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\iar\startup_LPC55S36.s</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_manager.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_port_uart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_adapter_usart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_common.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_component_generic_list.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\board.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\clock_config.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_LPC55S36.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_clock.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\pin_mux.o</file>
             <file>$PROJ_DIR$\Debug\Obj\peripherals.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_common_arm.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_ctimer.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_dac.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_net.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\pin_mux.o</file>
+            <file>$PROJ_DIR$\..\mc_periph_init.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\board.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_clock.o</file>
+            <file>$PROJ_DIR$\..\mc_periph_init.h</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_can.o</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\iar\startup_LPC55S36.s</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_inputmux.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_LPC55S36.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_pint.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_uart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_net.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_common.o</file>
+            <file>$PROJ_DIR$\..\char_pwrstg.h</file>
+            <file>$PROJ_DIR$\..\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\clock_config.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_adapter_usart.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_pipes.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_udp.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_appcmd.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_pdbdm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_manager.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_port_uart.o</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\fsl_assert.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\debug_console\fsl_debug_console.c</file>
+            <file>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\str\fsl_str.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_component_generic_list.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_power.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_reset.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_mcan.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_tcp.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_protocol.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_pdbdm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_miniusart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_sha.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_ures.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_mscan.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lpadc.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_lpuart.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_flexcan.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_usart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_power.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_miniusart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_lpuart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_rec.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_scope.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_sha.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_tsa.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_mscan.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_ures.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_utils.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_lpadc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usb.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_mcan.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_lpsci.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_flexcomm.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_reset.o</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_tcp.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_pint.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_flexcan.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_tcp.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_mscan.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_appcmd.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_rec.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\mcdrv_enc_lpc55s36.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_appcmd.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_flexcomm.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_pint.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_udp.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_rec.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_scope.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usb.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_flexcan.xcl</file>
+            <file>$PROJ_DIR$\..\board.c</file>
+            <file>$PROJ_DIR$\..\clock_config.c</file>
+            <file>$PROJ_DIR$\..\peripherals.c</file>
+            <file>$PROJ_DIR$\..\pin_mux.c</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_lpsci.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_mcan.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_can.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_udp.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_protocol.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_sha.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_lpuart.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_tsa.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_uart.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_pdbdm.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_reset.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usb.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_ures.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_net.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\mcdrv_adc_lpc55s36.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_power.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_scope.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_usart.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_pipes.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_scope.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_power.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\M1_statemachine.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_miniusart.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\freemaster_utils.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\mcdrv_eflexpwm_lpc.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_protocol.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_lpuart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_pdbdm.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_usart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_miniusart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_reset.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\mcdrv_eflexpwm_lpc.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\mc_periph_init.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
             <file>$PROJ_DIR$\Debug\Exe\dual_servo.out</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usb.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\dual_servo.pbd</file>
-            <file>$PROJ_DIR$\Debug\Obj\motor_structure.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_str.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\mcdrv_enc_lpc55s36.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_uart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_rec.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_mcan.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_net_lwip_udp.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial_usart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_net.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\freemaster_serial.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\board.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_component_generic_list.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_assert.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\state_machine.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\M2_statemachine .xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\system_LPC55S36.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_dac.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_flexcomm.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\motor_structure.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_inputmux.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_lpadc.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\mcdrv_eflexpwm_lpc.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\mc_periph_init.o</file>
             <file>$PROJ_DIR$\Debug\Obj\pin_mux.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_lpadc.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\mc_periph_init.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_str.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\M1_statemachine.o</file>
             <file>$PROJ_DIR$\Debug\Obj\motor_structure.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\peripherals.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_common_arm.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_dac.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_common_arm.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\peripherals.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\mcdrv_enc_lpc55s36.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_str.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\system_LPC55S36.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_gpio.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_clock.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_ctimer.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_debug_console.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_manager.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_flexcomm.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\clock_config.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_adapter_usart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\mcdrv_eflexpwm_lpc.o</file>
             <file>$PROJ_DIR$\Debug\Obj\mcdrv_adc_lpc55s36.o</file>
             <file>$PROJ_DIR$\Debug\Obj\startup_LPC55S36.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_assert.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\board.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_component_generic_list.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\state_machine.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_port_uart.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\M2_statemachine .o</file>
+            <file>$PROJ_DIR$\Debug\Obj\fsl_component_serial_port_uart.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\state_machine.o</file>
             <file>$PROJ_DIR$\Debug\Obj\fsl_common.xcl</file>
         </outputs>
         <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 153</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\pin_mux.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 81</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 168</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\peripherals.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 82</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 171</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\board.c</name>
+            <name>$PROJ_DIR$\..\..\..\components\lists\fsl_component_generic_list.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -241,215 +196,7 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 185</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\clock_config.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 78</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 180</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 75</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 190</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\components\uart\fsl_adapter_usart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 74</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 181</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_lpadc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 111</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 165</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_ctimer.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 84</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 177</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_dac.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 85</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 161</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_flexcomm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 115</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 162</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\system_LPC55S36.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 79</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 160</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_clock.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 80</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 176</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_inputmux.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 87</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 164</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_pint.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 88</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 118</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_gpio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 98</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 163</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_power.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 99</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 142</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common_arm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 83</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 172</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\components\serial_manager\fsl_component_serial_port_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 73</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 188</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\components\lists\fsl_component_generic_list.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 76</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 186</file>
+                    <file> 147</file>
                 </tool>
             </outputs>
         </file>
@@ -462,16 +209,263 @@
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 179</file>
+                    <file> 170</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\mc_drivers\mcdrv_enc_lpc55s36.c</name>
+            <name>$PROJ_DIR$\..\..\..\components\serial_manager\fsl_component_serial_port_uart.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 174</file>
+                    <file> 73</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 178</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\components\uart\fsl_adapter_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 70</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 173</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\system_LPC55S36.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 63</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 165</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common_arm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 51</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 161</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 85</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 166</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_ctimer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 52</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 168</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_dac.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 53</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 160</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_pint.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 64</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_flexcan.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 92</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 108</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 66</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 180</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_mcan.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 81</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 140</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_inputmux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 62</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 152</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_usart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 128</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_clock.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 58</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 167</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_flexcomm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 102</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 171</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_lpadc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 90</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 154</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_power.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 121</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_reset.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 80</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 130</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpuart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 91</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 126</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_protocol.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 83</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -484,124 +478,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 90</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 140</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_protocol.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 95</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 131</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_utils.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 110</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 148</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\motor_control\M1_statemachine.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 169</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 146</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pipes.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 91</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 145</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\motor_control\M2_statemachine .c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 189</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 159</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pdbdm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 94</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 136</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\mc_drivers\mcdrv_adc_lpc55s36.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 182</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 141</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_rec.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 103</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 123</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_scope.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 104</file>
+                    <file> 54</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -610,85 +487,46 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_sha.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_tcp.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 105</file>
+                    <file> 97</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 132</file>
+                    <file> 82</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_ures.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_udp.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 109</file>
+                    <file> 104</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 139</file>
+                    <file> 141</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_serial.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpsci.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 108</file>
+                    <file> 96</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 124</file>
+                    <file> 113</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\mc_drivers\mcdrv_eflexpwm_lpc.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 166</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 149</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_tsa.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 106</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 134</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_appcmd.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 93</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 122</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_can.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_miniusart.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -701,89 +539,11 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 102</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 126</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_usart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 97</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 144</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpuart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 101</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 133</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_tcp.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 117</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 120</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\drivers\fsl_reset.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 116</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 137</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
             <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_uart.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 89</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 135</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usb.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 112</file>
+                    <file> 65</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -792,54 +552,54 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_flexcan.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usb.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 96</file>
+                    <file> 107</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 119</file>
+                    <file> 135</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\can\freemaster_mcan.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_usart.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 113</file>
+                    <file> 101</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 128</file>
+                    <file> 142</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\network\freemaster_net_lwip_udp.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_appcmd.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 92</file>
+                    <file> 100</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 130</file>
+                    <file> 99</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_lpsci.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_can.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
+                    <file> 60</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
                     <file> 114</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 127</file>
                 </tool>
             </outputs>
         </file>
@@ -848,24 +608,141 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 107</file>
+                    <file> 89</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 121</file>
+                    <file> 98</file>
                 </tool>
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\drivers\mcuxsdk\serial\freemaster_serial_miniusart.c</name>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pdbdm.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 100</file>
+                    <file> 84</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 147</file>
+                    <file> 127</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_pipes.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 71</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 119</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\mc_drivers\mcdrv_adc_lpc55s36.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 175</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 118</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_scope.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 106</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 120</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_serial.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 78</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 144</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_tsa.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 94</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 116</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_sha.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 87</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 115</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\mc_drivers\mcdrv_enc_lpc55s36.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 163</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 137</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\motor_control\M1_statemachine.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 157</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 122</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_rec.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 105</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 139</file>
                 </tool>
             </outputs>
         </file>
@@ -874,72 +751,7 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 170</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 155</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\debug_console\fsl_debug_console.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 178</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 150</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\fsl_assert.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 184</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 157</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\motor_control\state_machine.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 187</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
                     <file> 158</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 173</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 152</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\..\mc_periph_init.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 167</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -948,15 +760,80 @@
             </outputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\str\fsl_str.c</name>
+            <name>$PROJ_DIR$\..\motor_control\state_machine.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 175</file>
+                    <file> 179</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 156</file>
+                    <file> 149</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\mc_drivers\mcdrv_eflexpwm_lpc.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 174</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 131</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_ures.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 88</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 117</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\middleware\freemaster\src\common\freemaster_utils.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 95</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 123</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\motor_control\M2_statemachine .c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 177</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 150</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\mc_periph_init.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 155</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 132</file>
                 </tool>
             </outputs>
         </file>
@@ -965,7 +842,120 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 183</file>
+                    <file> 176</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 159</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 133</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\fsl_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 145</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 148</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\debug_console\fsl_debug_console.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 169</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 124</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\..\..\devices\LPC55S36\utilities\str\fsl_str.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 164</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 156</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 134</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\board.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 146</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\clock_config.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 69</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 172</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\peripherals.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 50</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 162</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\pin_mux.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 55</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 153</file>
                 </tool>
             </outputs>
         </file>

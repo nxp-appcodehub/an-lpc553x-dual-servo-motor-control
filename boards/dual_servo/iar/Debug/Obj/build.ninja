@@ -1,0 +1,92 @@
+#Generating source browse information for project dual_servo
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.5\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.5\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.5\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build board.pbi : index board.xcl
+build clock_config.pbi : index clock_config.xcl
+build peripherals.pbi : index peripherals.xcl
+build pin_mux.pbi : index pin_mux.xcl
+build fsl_component_generic_list.pbi : index fsl_component_generic_list.xcl
+build fsl_component_serial_manager.pbi : index fsl_component_serial_manager.xcl
+build fsl_component_serial_port_uart.pbi : index fsl_component_serial_port_uart.xcl
+build fsl_adapter_usart.pbi : index fsl_adapter_usart.xcl
+build system_LPC55S36.pbi : index system_LPC55S36.xcl
+build fsl_clock.pbi : index fsl_clock.xcl
+build fsl_common.pbi : index fsl_common.xcl
+build fsl_common_arm.pbi : index fsl_common_arm.xcl
+build fsl_ctimer.pbi : index fsl_ctimer.xcl
+build fsl_dac.pbi : index fsl_dac.xcl
+build fsl_flexcomm.pbi : index fsl_flexcomm.xcl
+build fsl_gpio.pbi : index fsl_gpio.xcl
+build fsl_inputmux.pbi : index fsl_inputmux.xcl
+build fsl_lpadc.pbi : index fsl_lpadc.xcl
+build fsl_pint.pbi : index fsl_pint.xcl
+build fsl_power.pbi : index fsl_power.xcl
+build fsl_reset.pbi : index fsl_reset.xcl
+build fsl_usart.pbi : index fsl_usart.xcl
+build freemaster_flexcan.pbi : index freemaster_flexcan.xcl
+build freemaster_mcan.pbi : index freemaster_mcan.xcl
+build freemaster_mscan.pbi : index freemaster_mscan.xcl
+build freemaster_net_lwip_tcp.pbi : index freemaster_net_lwip_tcp.xcl
+build freemaster_net_lwip_udp.pbi : index freemaster_net_lwip_udp.xcl
+build freemaster_serial_lpsci.pbi : index freemaster_serial_lpsci.xcl
+build freemaster_serial_lpuart.pbi : index freemaster_serial_lpuart.xcl
+build freemaster_serial_miniusart.pbi : index freemaster_serial_miniusart.xcl
+build freemaster_serial_uart.pbi : index freemaster_serial_uart.xcl
+build freemaster_serial_usart.pbi : index freemaster_serial_usart.xcl
+build freemaster_serial_usb.pbi : index freemaster_serial_usb.xcl
+build freemaster_appcmd.pbi : index freemaster_appcmd.xcl
+build freemaster_can.pbi : index freemaster_can.xcl
+build freemaster_net.pbi : index freemaster_net.xcl
+build freemaster_pdbdm.pbi : index freemaster_pdbdm.xcl
+build freemaster_pipes.pbi : index freemaster_pipes.xcl
+build freemaster_protocol.pbi : index freemaster_protocol.xcl
+build freemaster_rec.pbi : index freemaster_rec.xcl
+build freemaster_scope.pbi : index freemaster_scope.xcl
+build freemaster_serial.pbi : index freemaster_serial.xcl
+build freemaster_sha.pbi : index freemaster_sha.xcl
+build freemaster_tsa.pbi : index freemaster_tsa.xcl
+build freemaster_ures.pbi : index freemaster_ures.xcl
+build freemaster_utils.pbi : index freemaster_utils.xcl
+build mcdrv_adc_lpc55s36.pbi : index mcdrv_adc_lpc55s36.xcl
+build mcdrv_eflexpwm_lpc.pbi : index mcdrv_eflexpwm_lpc.xcl
+build mcdrv_enc_lpc55s36.pbi : index mcdrv_enc_lpc55s36.xcl
+build M1_statemachine.pbi : index M1_statemachine.xcl
+build M2_statemachine$ .pbi : index M2_statemachine$ .xcl
+build motor_structure.pbi : index motor_structure.xcl
+build state_machine.pbi : index state_machine.xcl
+build main.pbi : index main.xcl
+build mc_periph_init.pbi : index mc_periph_init.xcl
+build fsl_assert.pbi : index fsl_assert.xcl
+build fsl_debug_console.pbi : index fsl_debug_console.xcl
+build fsl_str.pbi : index fsl_str.xcl
+build dual_servo_part0.pbi : link board.pbi clock_config.pbi peripherals.pbi pin_mux.pbi fsl_component_generic_list.pbi fsl_component_serial_manager.pbi fsl_component_serial_port_uart.pbi fsl_adapter_usart.pbi
+build dual_servo_part1.pbi : link system_LPC55S36.pbi fsl_clock.pbi fsl_common.pbi fsl_common_arm.pbi fsl_ctimer.pbi fsl_dac.pbi fsl_flexcomm.pbi fsl_gpio.pbi
+build dual_servo_part2.pbi : link fsl_inputmux.pbi fsl_lpadc.pbi fsl_pint.pbi fsl_power.pbi fsl_reset.pbi fsl_usart.pbi freemaster_flexcan.pbi freemaster_mcan.pbi
+build dual_servo_part3.pbi : link freemaster_mscan.pbi freemaster_net_lwip_tcp.pbi freemaster_net_lwip_udp.pbi freemaster_serial_lpsci.pbi freemaster_serial_lpuart.pbi freemaster_serial_miniusart.pbi freemaster_serial_uart.pbi freemaster_serial_usart.pbi
+build dual_servo_part4.pbi : link freemaster_serial_usb.pbi freemaster_appcmd.pbi freemaster_can.pbi freemaster_net.pbi freemaster_pdbdm.pbi freemaster_pipes.pbi freemaster_protocol.pbi freemaster_rec.pbi
+build dual_servo_part5.pbi : link freemaster_scope.pbi freemaster_serial.pbi freemaster_sha.pbi freemaster_tsa.pbi freemaster_ures.pbi freemaster_utils.pbi mcdrv_adc_lpc55s36.pbi mcdrv_eflexpwm_lpc.pbi
+build dual_servo_part6.pbi : link mcdrv_enc_lpc55s36.pbi M1_statemachine.pbi M2_statemachine$ .pbi motor_structure.pbi state_machine.pbi main.pbi mc_periph_init.pbi fsl_assert.pbi
+build dual_servo_part7.pbi : link fsl_debug_console.pbi fsl_str.pbi
+build dual_servo.pbd : link dual_servo_part0.pbi dual_servo_part1.pbi dual_servo_part2.pbi dual_servo_part3.pbi dual_servo_part4.pbi dual_servo_part5.pbi dual_servo_part6.pbi dual_servo_part7.pbi
+build dual_servo.pbw : browsedata dual_servo.pbd
+
+
