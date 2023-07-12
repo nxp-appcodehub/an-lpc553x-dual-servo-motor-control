@@ -43,29 +43,29 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 ## 2. Software
 
-CM33_RTCESL_4.6.2
+- CM33_RTCESL_4.6.2
 
-SDK2.10
+- SDK: 2.10
 
-FreeMASTER 3.1.2
+- FreeMASTER 3.1.2
 
-IAR Workbench IDE 8.50.9
+- IAR Workbench IDE 8.50.9
 
 ## 2. Hardware
 
-•  LPCXpresso55S36 EVK board
+-  LPC55S36-EVK REV B
 
-•  Two FRDM-MC-LVPMSM boards
+-  Two FRDM-MC-LVPMSM boards
 
-•  Two 24 V servo motors
+-  Two 24 V servo motors
 
-•  Micro USB cable
+-  Micro USB cable
 
 ## 3. Setup<a name="step3"></a>
 
 1. Plug the LPCXpresso55S36 and FRDM-MC-LVPMSM board together via Arduino interface, connect motor wires and encoder interface.
 
-   <img src="picture/evk front.png" style="zoom:20%;" />
+   ![picture](picture/evk front.png)
 
 2. Power on 24 V adapter to power on the FRDM-MC-LVPMSM board.
 
@@ -75,7 +75,7 @@ IAR Workbench IDE 8.50.9
 
 5. Click the GO! button to enable the communication between PC and LPC553x/LPC55S3x.
 
-   <img src="picture/FreeMASTER control page.png" style="zoom:100%;" />
+   ![picture](picture/FreeMASTER control page.png)
 
 6. Click the DualServo page.
 
@@ -89,11 +89,11 @@ All the following experimental results are tested when the motor is loaded with 
 
 Below figure shows the speed and current waveforms when the motor startup is at 2500 RPM. The red line is speed requirement, the green line is actual speed, and blue line is torque current. We can see that it can accelerate to 2500 RPM within 0.13 s, and the overshoot is very small.
 
-![](picture/speed and current response.png)
+![picture](picture/speed and current response.png)
 
 As shown in [Figure 18](#_bookmark22), the top waveforms show the speed response and the bottom waveforms show the position response. The red line is the requirement, the green line is the actual value, and the blue line shows the error between them. After setting the 180o position requirement, it takes about 0.1 seconds to reach the desired position. We can see that the error of dynamic response is small and the static response is very stable.
 
-![](picture/Position and speed response.png)
+![picture](picture/Position and speed response.png)
 
 Please refer to the application note for the details: https://www.nxp.com.cn/docs/en/application-note/AN13569.pdf
 
