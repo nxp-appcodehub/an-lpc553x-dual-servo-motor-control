@@ -39,7 +39,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 •  Flexcomm provides various peripheral function options that can be configured into USART, SPI, I2C, I2S functions through software. Here we configure the USART function to realize the communication between the FreeMASTER debugging tool and LPC553x/LPC55S3x to demonstrate the user's operation.
 
-![structure](picture/system structure.png)
+![](/picture/system structure.png)
 
 ## 2. Software
 
@@ -65,7 +65,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 1. Plug the LPCXpresso55S36 and FRDM-MC-LVPMSM board together via Arduino interface, connect motor wires and encoder interface.
 
-   ![](/picture/evk front.png)
+   ![](/picture/front.png)
 
 2. Power on 24 V adapter to power on the FRDM-MC-LVPMSM board.
 
