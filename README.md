@@ -39,7 +39,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 •  Flexcomm provides various peripheral function options that can be configured into USART, SPI, I2C, I2S functions through software. Here we configure the USART function to realize the communication between the FreeMASTER debugging tool and LPC553x/LPC55S3x to demonstrate the user's operation.
 
-![](/picture/system structure.png)
+![structure](picture/system structure.png)
 
 ## 2. Software
 
