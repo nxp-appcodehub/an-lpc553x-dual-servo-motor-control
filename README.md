@@ -39,7 +39,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 •  Flexcomm provides various peripheral function options that can be configured into USART, SPI, I2C, I2S functions through software. Here we configure the USART function to realize the communication between the FreeMASTER debugging tool and LPC553x/LPC55S3x to demonstrate the user's operation.
 
-![](/picture/system_structure.png)
+![](picture/system_structure.png)
 
 ## 2. Software
 
@@ -65,7 +65,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 1. Plug the LPCXpresso55S36 and FRDM-MC-LVPMSM board together via Arduino interface, connect motor wires and encoder interface.
 
-   ![](/picture/front.png)
+   ![](picture/front.png)
 
 2. Power on 24 V adapter to power on the FRDM-MC-LVPMSM board.
 
@@ -75,7 +75,7 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 5. Click the GO! button to enable the communication between PC and LPC553x/LPC55S3x.
 
-   ![](/picture/FreeMASTER_control_page.png)
+   ![](picture/FreeMASTER_control_page.png)
 
 6. Click the DualServo page.
 
@@ -89,11 +89,11 @@ All the following experimental results are tested when the motor is loaded with 
 
 Below figure shows the speed and current waveforms when the motor startup is at 2500 RPM. The red line is speed requirement, the green line is actual speed, and blue line is torque current. We can see that it can accelerate to 2500 RPM within 0.13 s, and the overshoot is very small.
 
-![](/picture/speed_and_current_response.png)
+![](picture/speed_and_current_response.png)
 
 As shown in [Figure 18](#_bookmark22), the top waveforms show the speed response and the bottom waveforms show the position response. The red line is the requirement, the green line is the actual value, and the blue line shows the error between them. After setting the 180o position requirement, it takes about 0.1 seconds to reach the desired position. We can see that the error of dynamic response is small and the static response is very stable.
 
-![](/picture/Position_and_speed_response.png)
+![](picture/Position_and_speed_response.png)
 
 Please refer to the application note for the details: https://www.nxp.com.cn/docs/en/application-note/AN13569.pdf
 
