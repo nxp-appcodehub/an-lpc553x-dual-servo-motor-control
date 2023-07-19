@@ -1,5 +1,5 @@
-Release Name: MCUXpresso Software Development Kit (SDK)
-Release Version: 2.10.1
+Release Name: LPC553x dual-servo motor control
+Release Version: 1.0
 Package License: LA_OPT_NXP_Software_License.txt - Additional Distribution License granted, license in Section 2.3 applies
 
 SDK_Peripheral_Driver      Name: SDK Peripheral Driver                       
