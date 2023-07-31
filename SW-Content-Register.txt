@@ -11,19 +11,7 @@ SDK_Peripheral_Driver      Name: SDK Peripheral Driver
                            the most common use cases identified for the      
                            underlying hardware block.                        
                            Location: devices/<device>/drivers                
-                           Origin: NXP (BSD-3-Clause)                        
-
-SDK_Examples               Name: SDK examples                                
-                           Version: NA                                       
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code, binary, project files, linker
-                           files                                             
-                           Description: SDK out of box examples to show how  
-                           to use peripheral drivers and integrate           
-                           middleware.                                       
-                           Location: boards/<board>/                         
-                           Origin: NXP (BSD-3-Clause)                        
+                           Origin: NXP (BSD-3-Clause)                                           
 
 SDK_Device                 Name: SDK SoC files                               
                            Version: NA                                       
@@ -78,7 +66,7 @@ rtcesl                     Name: rtcesl
                            Format: object code & header files                
                            Description: NXP Real Time Control Embedded       
                            Software Library.                                 
-                           Location: middleware/rtcesl                       
+                           Location: middleware/CM33F_RTCESL_4.6.2_IAR                      
                            Origin: NXP (BSD-3-Clause)                        
 
 motor_control              Name: motor_control                               
@@ -86,9 +74,8 @@ motor_control              Name: motor_control
                            Outgoing License: BSD-3-Clause                    
                            License File: COPYING-BSD-3                       
                            Format: source code                               
-                           Description: Motor control examples for PMSM BLDC,
-                           ACIM motors.                                      
-                           Location: middleware/motor_control                
+                           Description: Motor control examples for PMSM servo motors.                                      
+                           Location: boards/dual_servo/motor_control            
                            Origin: NXP (BSD-3-Clause)                        
 
 motor_control - jQuery     Name: motor_control                               
@@ -98,7 +85,7 @@ motor_control - jQuery     Name: motor_control
                            Format: library                                   
                            Description: Advanced jQuery and HTML5 UI         
                            framework.                                        
-                           Location: middleware/motor_control/freemaster     
+                           Location: FM_ControlPage     
                            Origin: jQWidgets                                 
 
 motor_control - JavaScript Name: motor_control                               
@@ -108,22 +95,8 @@ motor_control - JavaScript Name: motor_control
                            License File: jquery.org/license                  
                            Format: source code                               
                            Description: Cross-platform JavaScript library.   
-                           Location: middleware/motor_control/freemaster     
-                           Origin: jQuery Foundation, Inc.                   
-
-motor_control - MCAA       Name: motor_control                               
-library                    Version: 1.0.0                                    
-                           Outgoing License: LA_OPT_NXP_Software_License.txt 
-                           - Additional distribution license granted -       
-                           License in Section 2.3 applies                    
-                           License File: LA_OPT_NXP_Software_License.txt     
-                           Format: object code & header files                
-                           Description: Motor Control Advanced Algorithms    
-                           library                                           
-                           Location:                                         
-                           middleware/motor_control/pmsm/pmsm_float/mc_algori
-                           thms/mcaa_lib                                     
-                           Origin: NXP (BSD-3-Clause)                        
+                           Location: FM_ControlPage   
+                           Origin: jQuery Foundation, Inc.                                        
 
 cmsis_drivers              Name: SDK CMSIS Peripheral Drivers                
                            Version: 2.x.x                                    
@@ -148,13 +121,4 @@ freemaster                 Name: FreeMASTER
                            Format: source code & header files                
                            Description: FreeMASTER communication driver      
                            Location: middleware/freemaster/src               
-                           Origin: NXP                                       
-
-freemaster-examples        Name: FreeMASTER                                  
-                           Version: 3.0.4                                    
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code & header files                
-                           Description: FreeMASTER example applications      
-                           Location: boards/<board>/freemaster_examples      
-                           Origin: NXP                                       
+                           Origin: NXP                                                                           
