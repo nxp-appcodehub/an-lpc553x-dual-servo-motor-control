@@ -1,28 +1,18 @@
 Release Name: LPC553x dual-servo motor control
 Release Version: 1.0
 Package License: LA_OPT_NXP_Software_License.txt v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
-Distribution License granted, license in Section 2.3 applies
+License File: LICENSE
 
-SDK_Peripheral_Driver      Name: SDK Peripheral Driver                       
-                           Version: 2.x.x                                    
+board                      Name: Board configuration Driver                       
+                           Version:NA                                  
                            Outgoing License: BSD-3-Clause                    
                            License File: COPYING-BSD-3                       
                            Format: source code                               
                            Description: Peripheral drivers are designed for  
                            the most common use cases identified for the      
                            underlying hardware block.                        
-                           Location: devices/<device>/drivers                
-                           Origin: NXP (BSD-3-Clause)                                           
-
-SDK_Device                 Name: SDK SoC files                               
-                           Version: NA                                       
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code, linker files                 
-                           Description: Device system files, template files, 
-                           IDE related startup and linker files.             
-                           Location: devices/<device>/                       
-                           Origin: NXP (BSD-3-Clause)                        
+                           Location: boards/                
+                           Origin: NXP (BSD-3-Clause)                                                                 
 
 cmsis                      Name: CMSIS                                       
                            Version: 5.6.0                                    
@@ -38,25 +28,47 @@ cmsis                      Name: CMSIS
                            https://github.com/ARM-software/CMSIS_5/releases/t
                            ag/5.6.0                                          
 
-cmsis_gpio                 Name: CMSIS GPIO Interface                        
-                           Version: 2.0.0                                    
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code                               
-                           Description: CMSIS Driver style GPIO interface    
-                           definition created by NXP.                        
-                           Location: CMSIS/Driver/Include/Driver_GPIO.h      
-                           Origin: NXP (BSD-3-Clause)                        
-
-SDK_Components             Name: SDK components and board peripheral drivers 
+component                  Name: components and board peripheral drivers 
                            Version: NA                                       
                            Outgoing License: BSD-3-Clause                    
                            License File: COPYING-BSD-3                       
                            Format: source code                               
-                           Description: SDK components and board peripheral  
+                           Description: components and board peripheral  
                            drivers, for example, flash and codec drivers.    
                            Location: components/                             
+                           Origin: NXP (BSD-3-Clause)                      
+
+device                     Name: SDK SoC files                               
+                           Version: NA                                       
+                           Outgoing License: BSD-3-Clause                    
+                           License File: COPYING-BSD-3                       
+                           Format: source code, linker files                 
+                           Description: Device system files, template files, 
+                           IDE related startup and linker files.             
+                           Location: devices/                      
                            Origin: NXP (BSD-3-Clause)                        
+
+driver                     Name: SDK Peripheral Driver                       
+                           Version: 2.x.x                                    
+                           Outgoing License: BSD-3-Clause                    
+                           License File: COPYING-BSD-3                       
+                           Format: source code                               
+                           Description: Peripheral drivers are designed for  
+                           the most common use cases identified for the      
+                           underlying hardware block.                        
+                           Location: devices/<device>/drivers/                
+                           Origin: NXP (BSD-3-Clause)
+
+freemaster                 Name: FreeMASTER                                  
+                           Version: 3.0.4                                    
+                           Outgoing License: LA_OPT_NXP_Software_License v48 July 2023
+                           - Additional distribution license granted -       
+                           License in Section 2.3 applies                    
+                           License File: LICENSE                                          
+                           Format: source code & header files                
+                           Description: FreeMASTER communication driver      
+                           Location: middleware/freemaster/               
+                           Origin: NXP   
 
 rtcesl                     Name: rtcesl                                      
                            Version: 4.6.2 (CM0,CM4,CM7,CM33) + 4.5 (DSC)     
@@ -68,7 +80,7 @@ rtcesl                     Name: rtcesl
                            Description: NXP Real Time Control Embedded       
                            Software Library.                                 
                            Location: middleware/CM33F_RTCESL_4.6.2_IAR                      
-                           Origin: NXP (BSD-3-Clause)                        
+                           Origin: NXP (BSD-3-Clause)                                              
 
 motor_control              Name: motor_control                               
                            Version: 2.10.0                                   
@@ -77,7 +89,7 @@ motor_control              Name: motor_control
                            Format: source code                               
                            Description: Motor control examples for PMSM servo motors.                                      
                            Location: boards/dual_servo/motor_control            
-                           Origin: NXP (BSD-3-Clause)                        
+                           Origin: NXP (BSD-3-Clause) 
 
 motor_control - jQuery     Name: motor_control                               
                            Version: v3.7.1 (2015-Feb)                        
@@ -98,28 +110,4 @@ motor_control - JavaScript Name: motor_control
                            Description: Cross-platform JavaScript library.   
                            Location: FM_ControlPage   
                            Origin: jQuery Foundation, Inc.                                        
-
-cmsis_drivers              Name: SDK CMSIS Peripheral Drivers                
-                           Version: 2.x.x                                    
-                           Outgoing License: Apache License 2.0              
-                           License File: CMSIS/LICENSE.txt                   
-                           Format: source code                               
-                           Description: CMSIS Peripheral drivers are designed
-                           to provide hardware independent APIs which make   
-                           application reusable across a wide range of       
-                           supported microcontroller devices.                
-                           Location: devices/<device>/cmsis_drivers          
-                           Origin: NXP (Apache License 2.0)                  
-
-freemaster                 Name: FreeMASTER                                  
-                           Version: 3.0.4                                    
-                           Outgoing License: LA_OPT_NXP_Software_License.txt 
-                           - Additional distribution license granted -       
-                           License in Section 2.3 applies                    
-                           License File:                                     
-                           middleware/freemaster/LA_OPT_NXP_Software_License.
-                           txt                                               
-                           Format: source code & header files                
-                           Description: FreeMASTER communication driver      
-                           Location: middleware/freemaster/src               
-                           Origin: NXP                                                                           
+                                                                        
