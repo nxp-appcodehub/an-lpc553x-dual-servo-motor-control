@@ -72,10 +72,10 @@ freemaster                 Name: FreeMASTER
 
 rtcesl                     Name: rtcesl                                      
                            Version: 4.6.2 (CM0,CM4,CM7,CM33) + 4.5 (DSC)     
-                           Outgoing License: LA_OPT_NXP_Software_License.txt 
+                           Outgoing License: LA_OPT_NXP_Software_License v48 July 2023
                            - Additional distribution license granted -       
                            License in Section 2.3 applies                    
-                           License File: LA_OPT_NXP_Software_License.txt     
+                           License File: LICENSE     
                            Format: object code & header files                
                            Description: NXP Real Time Control Embedded       
                            Software Library.                                 
