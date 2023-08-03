@@ -1,6 +1,6 @@
 Release Name: LPC553x dual-servo motor control
 Release Version: 1.0
-Package License: LA_OPT_NXP_Software_License.txt v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
+Package License: LA_OPT_NXP_Software_License v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
 License File: LICENSE
 
 board                      Name: Board configuration Driver                       
