@@ -1,14 +1,9 @@
-/******************************************************************************
+/*
+* Copyright 2023 NXP
+* All rights reserved.
 *
-* Freescale Semiconductor Inc.
-* (c) Copyright 2008 Freescale Semiconductor, Inc.
-* ALL RIGHTS RESERVED.
-*
-*******************************************************************************
-*
-* State machine.
-*
-******************************************************************************/
+* SPDX-License-Identifier: BSD-3-Clause
+*/
 
 #ifndef _STATE_MACHINE_H_
 #define _STATE_MACHINE_H_
