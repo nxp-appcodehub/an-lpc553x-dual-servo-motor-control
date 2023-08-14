@@ -4,32 +4,20 @@ Package License: LA_OPT_NXP_Software_License v48 July 2023- Additional Distribut
 License File: LICENSE
 Description: This application code is to demostrate dual servo motor control performance based on LPC553x-EVK.
 Release Location: https://github.com/nxp-appcodehub/an-lpc553x-dual-servo-motor-control
-Origin: NXP
-
-board                      Name: Board configuration Driver                       
-                           Version:NA                                  
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code                               
-                           Description: Peripheral drivers are designed for  
-                           the most common use cases identified for the      
-                           underlying hardware block.                        
-                           Location: boards/                
-                           Origin: NXP (BSD-3-Clause)                                                                 
+Origin: NXP (BSD-3-Clause)
+        CMSIS (Apache-2.0) ARM (Apache-2.0) https://github.com/ARM-software/CMSIS_5/
+        CMSIS compiler ICCARM (Apache-2.0) IAR Systems (Apache-2.0) https://github.com/ARM-software/CMSIS_5/
 
 cmsis                      Name: CMSIS                                       
                            Version: 5.6.0                                    
                            Outgoing License: Apache License 2.0              
-                           License File: CMSIS/LICENSE.txt                   
+                           License File: CMSIS/LICENSE.txt                  
                            Format: source code                               
                            Description: Vendor-independent hardware          
                            abstraction layer for microcontrollers that are   
                            based on Arm Cortex processors, distributed by    
-                           ARM. cores                                        
-                           Location: CMSIS/                                  
-                           Origin: ARM (Apache-2.0) -                        
-                           https://github.com/ARM-software/CMSIS_5/releases/t
-                           ag/5.6.0 
+                           ARM. cores                                                                     
+                           Origin: ARM (Apache-2.0) 
 
 cmsis - iccarm		       Name: CMSIS compiler ICCARM                                       
                            Version: 5.1.0                                    
@@ -39,81 +27,6 @@ cmsis - iccarm		       Name: CMSIS compiler ICCARM
                            Description: Vendor-independent hardware          
                            abstraction layer for microcontrollers that are   
                            based on Arm Cortex processors, distributed by    
-                           ARM. cores                                        
-                           Location: CMSIS/Core/Include                                  
-                           Origin: ARM (Apache-2.0) -                        
-                           https://github.com/ARM-software/CMSIS_5/releases/t
-                           ag/5.6.0                                      
-
-component                  Name: components and board peripheral drivers 
-                           Version: NA                                       
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code                               
-                           Description: components and board peripheral  
-                           drivers, for example, flash and codec drivers.    
-                           Location: components/                             
-                           Origin: NXP (BSD-3-Clause)                      
-
-device                     Name: SDK SoC files                               
-                           Version: NA                                       
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code, linker files                 
-                           Description: Device system files, template files, 
-                           IDE related startup and linker files.             
-                           Location: devices/                      
-                           Origin: NXP (BSD-3-Clause)                        
-
-driver                     Name: SDK Peripheral Driver                       
-                           Version: 2.x.x                                    
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code                               
-                           Description: Peripheral drivers are designed for  
-                           the most common use cases identified for the      
-                           underlying hardware block.                        
-                           Location: devices/<device>/drivers/                
-                           Origin: NXP (BSD-3-Clause)
-
-freemaster                 Name: FreeMASTER                                  
-                           Version: 3.0.4                                    
-                           Outgoing License: LA_OPT_NXP_Software_License v48 July 2023
-                           - Additional distribution license granted -       
-                           License in Section 2.3 applies                    
-                           License File: LICENSE                                          
-                           Format: source code & header files                
-                           Description: FreeMASTER communication driver      
-                           Location: middleware/freemaster/               
-                           Origin: NXP   
-
-rtcesl                     Name: rtcesl                                      
-                           Version: 4.6.2 (CM0,CM4,CM7,CM33) + 4.5 (DSC)     
-                           Outgoing License: LA_OPT_NXP_Software_License v48 July 2023
-                           - Additional distribution license granted -       
-                           License in Section 2.3 applies                    
-                           License File: LICENSE     
-                           Format: object code & header files                
-                           Description: NXP Real Time Control Embedded       
-                           Software Library.                                 
-                           Location: middleware/CM33F_RTCESL_4.6.2_IAR                      
-                           Origin: NXP (BSD-3-Clause)                                              
-
-motor_control              Name: motor_control                               
-                           Version: 2.10.0                                   
-                           Outgoing License: BSD-3-Clause                    
-                           License File: COPYING-BSD-3                       
-                           Format: source code                               
-                           Description: Motor control examples for PMSM servo motors.                                      
-                           Location: boards/dual_servo/motor_control            
-                           Origin: NXP (BSD-3-Clause)                               
-
-FM - control page	   Name: FreeMASTER control page                               
-                           Version: v0.1.1.0                                  
-                           Outgoing License: BSD-3-Clause                                            
-                           License File: COPYING-BSD-3                 
-                           Format: source code                               
-                           Description: FreeMaster/HTML control page  
-                           Location: FM_ControlPage   
-                           Origin: NXP (BSD-3-Clause)                                        
+                           ARM. cores                                                                     
+                           Origin: IAR Systems (Apache-2.0)                                                              
                                                                         
