@@ -1,22 +1,23 @@
-Release Name: LPC553x dual-servo motor control
-Release Version: 1.0
-Package License: LA_OPT_NXP_Software_License v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
+Package: LPC553x dual-servo motor control
+Version: 1.0
+Outgoing License: LA_OPT_NXP_Software_License v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
 License File: LICENSE
-Description: This application code is to demostrate dual servo motor control performance based on LPC553x-EVK.
+Description and comments: This application code is to demostrate dual servo motor control performance based on LPC553x-EVK.
 Release Location: https://github.com/nxp-appcodehub/an-lpc553x-dual-servo-motor-control
 Origin: NXP (BSD-3-Clause)
-        CMSIS (Apache-2.0) ARM (Apache-2.0) https://github.com/ARM-software/CMSIS_5/
-        CMSIS compiler ICCARM (Apache-2.0) IAR Systems (Apache-2.0) https://github.com/ARM-software/CMSIS_5/
+        CMSIS (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
+        CMSIS compiler ICCARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
 
 cmsis                      Name: CMSIS                                       
                            Version: 5.6.0                                    
                            Outgoing License: Apache License 2.0              
                            License File: CMSIS/LICENSE.txt                  
                            Format: source code                               
-                           Description: Vendor-independent hardware          
+                           Description and comments: Vendor-independent hardware          
                            abstraction layer for microcontrollers that are   
                            based on Arm Cortex processors, distributed by    
-                           ARM. cores                                                                     
+                           ARM. cores     
+                           Release location: https://github.com/ARM-software/CMSIS_5/
                            Origin: ARM (Apache-2.0) 
 
 cmsis - iccarm		       Name: CMSIS compiler ICCARM                                       
@@ -24,9 +25,10 @@ cmsis - iccarm		       Name: CMSIS compiler ICCARM
                            Outgoing License: Apache License 2.0              
                            License File: CMSIS/LICENSE.txt                   
                            Format: header files                               
-                           Description: Vendor-independent hardware          
+                           Description and comments: Vendor-independent hardware          
                            abstraction layer for microcontrollers that are   
                            based on Arm Cortex processors, distributed by    
-                           ARM. cores                                                                     
-                           Origin: IAR Systems (Apache-2.0)                                                              
+                           ARM. cores                 
+                           Release location: https://github.com/ARM-software/CMSIS_5/
+                           Origin: IAR Systems (Apache-2.0)                            
                                                                         
