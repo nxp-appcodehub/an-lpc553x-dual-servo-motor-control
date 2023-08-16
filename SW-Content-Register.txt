@@ -26,7 +26,7 @@ cmsis                      Name: CMSIS
                            Release location：https://github.com/nxp-appcodehub/an-lpc553x-dual-servo-motor-control/tree/main/CMSIS/    
                            Origin: ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
 
-cmsis_iccarm		   Name: cmsis_iccarm.h                                     
+cmsis_iccarm		       Name: cmsis_iccarm.h                                     
                            Version: 5.1.0                                    
                            Outgoing License: Apache License 2.0              
                            License File: CMSIS/LICENSE.txt                   
