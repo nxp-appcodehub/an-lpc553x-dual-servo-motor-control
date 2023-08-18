@@ -9,7 +9,7 @@ Description and comments:  This application code is to demostrate dual servo mot
 Release Location:          https://github.com/nxp-appcodehub/an-lpc553x-dual-servo-motor-control
 Origin:                    NXP (proprietary)
                            NXP (BSD-3-Clause)
-                           CMSIS (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
+                           cmsis - CMSIS (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
                            cmsis_iccarm - IAR Systems, ARM (Apache-2.0) - https://github.com/ARM-software/CMSIS_5/
 
 
