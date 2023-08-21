@@ -1,6 +1,6 @@
 NXP Software Content Register
 
-Package:                   LPC553x dual-servo motor control
+Package:                   an-lpc553x-dual-servo-motor-control
 
 Version:                   1.0
 Outgoing License:          LA_OPT_NXP_Software_License v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
