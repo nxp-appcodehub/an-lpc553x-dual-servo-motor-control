@@ -103,6 +103,9 @@ typedef struct _hal_uart_state
 #if (defined(HAL_UART_DMA_ENABLE) && (HAL_UART_DMA_ENABLE > 0U))
     hal_uart_dma_state_t *dmaHandle;
 #endif /* HAL_UART_DMA_ENABLE */
+#if (defined(HAL_UART_ADAPTER_LOWPOWER) && (HAL_UART_ADAPTER_LOWPOWER > 0U))
+    hal_uart_config_t config;
+#endif
 } hal_uart_state_t;
 
 /*******************************************************************************
@@ -341,6 +344,9 @@ hal_uart_status_t HAL_UartInit(hal_uart_handle_t handle, const hal_uart_config_t
 #if (defined(HAL_UART_DMA_ENABLE) && (HAL_UART_DMA_ENABLE > 0U))
     uartHandle->dmaHandle = NULL;
 #endif /* HAL_UART_DMA_ENABLE */
+#if (defined(HAL_UART_ADAPTER_LOWPOWER) && (HAL_UART_ADAPTER_LOWPOWER > 0U))
+    (void)memcpy(&uartHandle->config, config, sizeof(hal_uart_config_t));
+#endif
 
 #if (defined(UART_ADAPTER_NON_BLOCKING_MODE) && (UART_ADAPTER_NON_BLOCKING_MODE > 0U))
 
@@ -424,8 +430,17 @@ hal_uart_status_t HAL_UartEnterLowpower(hal_uart_handle_t handle)
 
 hal_uart_status_t HAL_UartExitLowpower(hal_uart_handle_t handle)
 {
+#if (defined(HAL_UART_ADAPTER_LOWPOWER) && (HAL_UART_ADAPTER_LOWPOWER > 0U))
+    hal_uart_state_t *uartHandle;
     assert(handle);
 
+    uartHandle = (hal_uart_state_t *)handle;
+
+    HAL_UartInit(handle, &uartHandle->config);
+#if (defined(UART_ADAPTER_NON_BLOCKING_MODE) && (UART_ADAPTER_NON_BLOCKING_MODE > 0U))
+    USART_EnableInterrupts(s_UsartAdapterBase[uartHandle->instance], USART_FIFOINTENSET_RXLVL_MASK);
+#endif
+#endif
     return kStatus_HAL_UartSuccess;
 }
 

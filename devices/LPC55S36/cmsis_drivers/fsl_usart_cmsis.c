@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2013-2016 ARM Limited. All rights reserved.
  * Copyright (c) 2016, Freescale Semiconductor, Inc. Not a Contribution.
- * Copyright 2016-2017, 2020 NXP. Not a Contribution.
+ * Copyright 2016-2017, 2020, 2023 NXP. Not a Contribution.
  *
  * SPDX-License-Identifier: Apache-2.0
  *
@@ -33,7 +33,7 @@
      (defined(RTE_USART10) && RTE_USART10) || (defined(RTE_USART11) && RTE_USART11) || \
      (defined(RTE_USART12) && RTE_USART12) || (defined(RTE_USART13) && RTE_USART13))
 
-#define ARM_USART_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR((2), (2))
+#define ARM_USART_DRV_VERSION ARM_DRIVER_VERSION_MAJOR_MINOR((2), (4))
 
 /*
  * ARMCC does not support split the data section automatically, so the driver
@@ -126,47 +126,20 @@ static int32_t USART_CommonControl(uint32_t control,
 
     USART_GetDefaultConfig(&config);
     int32_t result  = ARM_DRIVER_OK;
-    bool isContinue = false;
 
     switch (control & ARM_USART_CONTROL_Msk)
     {
         case ARM_USART_MODE_ASYNCHRONOUS:
             /* USART Baudrate */
             config.baudRate_Bps = arg;
-            isContinue          = true;
-            break;
-
-        /* TX/RX IO is controlled in application layer. */
-        case ARM_USART_CONTROL_TX:
-            if (arg != 0U)
-            {
-                config.enableTx = true;
-            }
-            else
-            {
-                config.enableTx = false;
-            }
-            result = ARM_DRIVER_OK;
-            break;
-
-        case ARM_USART_CONTROL_RX:
-            if (arg != 0U)
-            {
-                config.enableRx = true;
-            }
-            else
-            {
-                config.enableRx = false;
-            }
-
-            result = ARM_DRIVER_OK;
             break;
 
         default:
             result = ARM_DRIVER_ERROR_UNSUPPORTED;
             break;
     }
-    if (!isContinue)
+
+    if (result != ARM_DRIVER_OK)
     {
         return result;
     }
@@ -377,7 +350,7 @@ static int32_t USART_DmaSend(const void *data, uint32_t num, cmsis_usart_dma_dri
     status_t status;
     usart_transfer_t xfer;
 
-    xfer.data     = (uint8_t *)data;
+    xfer.txData   = (const uint8_t *)data;
     xfer.dataSize = num;
 
     status = USART_TransferSendDMA(usart->resource->base, usart->handle, &xfer);
@@ -407,7 +380,7 @@ static int32_t USART_DmaReceive(void *data, uint32_t num, cmsis_usart_dma_driver
     status_t status;
     usart_transfer_t xfer;
 
-    xfer.data     = (uint8_t *)data;
+    xfer.rxData   = (uint8_t *)data;
     xfer.dataSize = num;
 
     status = USART_TransferReceiveDMA(usart->resource->base, usart->handle, &xfer);
@@ -552,13 +525,29 @@ static void KSDK_USART_NonBlockingCallback(USART_Type *base, usart_handle_t *han
 {
     uint32_t event = 0U;
 
-    if (kStatus_USART_TxIdle == status)
+    switch (status)
     {
-        event = ARM_USART_EVENT_SEND_COMPLETE;
-    }
-    if (kStatus_USART_RxIdle == status)
-    {
-        event = ARM_USART_EVENT_RECEIVE_COMPLETE;
+        case kStatus_USART_TxIdle:
+            event = ARM_USART_EVENT_SEND_COMPLETE;
+            break;
+        case kStatus_USART_RxIdle:
+            event = ARM_USART_EVENT_RECEIVE_COMPLETE;
+            break;
+        case kStatus_USART_RxError:
+            event = ARM_USART_EVENT_RX_OVERFLOW;
+            break;
+        case kStatus_USART_TxError:
+            event = ARM_USART_EVENT_TX_UNDERFLOW;
+            break;
+        case kStatus_USART_FramingError:
+            event = ARM_USART_EVENT_RX_FRAMING_ERROR;
+            break;
+        case kStatus_USART_ParityError:
+            event = ARM_USART_EVENT_RX_PARITY_ERROR;
+            break;
+        default:
+            /* Avoid MISRA 16.4. */
+            break;
     }
 
     /* User data is actually CMSIS driver callback. */
@@ -641,7 +630,7 @@ static int32_t USART_NonBlockingSend(const void *data, uint32_t num, cmsis_usart
     status_t status;
     usart_transfer_t xfer;
 
-    xfer.data     = (uint8_t *)data;
+    xfer.txData   = (const uint8_t *)data;
     xfer.dataSize = num;
 
     status = USART_TransferSendNonBlocking(usart->resource->base, usart->handle, &xfer);
@@ -671,7 +660,7 @@ static int32_t USART_NonBlockingReceive(void *data, uint32_t num, cmsis_usart_no
     status_t status;
     usart_transfer_t xfer;
 
-    xfer.data     = (uint8_t *)data;
+    xfer.rxData   = (uint8_t *)data;
     xfer.dataSize = num;
 
     status = USART_TransferReceiveNonBlocking(usart->resource->base, usart->handle, &xfer, NULL);

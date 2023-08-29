@@ -43,11 +43,11 @@ This figure presents the system structure block diagram of this dual servo demo.
 
 - CM33_RTCESL_4.6.2
 
-- SDK: 2.10
+- SDK: 2.14
 
 - FreeMASTER 3.1.2
 
-- IAR Workbench IDE 8.50.9
+- IAR Workbench IDE 9.40.1
 
 ## 2. Hardware
 
@@ -121,5 +121,5 @@ Questions regarding the content/correctness of this example can be entered as Is
 ## 6. Release Notes<a name="step6"></a>
 | Version | Description / Update                           | Date                        |
 |:-------:|------------------------------------------------|----------------------------:|
-| 1.0     | Initial release on Application Code HUb        | June 5<sup>nd</sup> 2023 |
+| 1.0     | Initial release on Application Code Hub       | June 5<sup>nd</sup> 2023 |
 
