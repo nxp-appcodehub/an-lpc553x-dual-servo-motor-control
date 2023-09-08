@@ -17,6 +17,7 @@
 /*******************************************************************************
  * Local function prototypes
  ******************************************************************************/
+static bool GetAdcResFIFO(ADC_Type *pBase, lpadc_conv_result_t *pResult, uint8_t index);
 
 /*******************************************************************************
  * Variables
@@ -37,7 +38,7 @@ void MCDRV_CurrAndVoltDcBusGet(mcdrv_adc_t *this)
     GMCLIB_3COOR_T_F16 sIABCtemp;
 
     /* Read available converted values from the FIFO. */
-    while( LPADC_GetConvResult(this->pToAdcBase, &this->s_ADC_ResultStructure, 0U) )
+    while( GetAdcResFIFO(this->pToAdcBase, &this->s_ADC_ResultStructure, 0U) )
     {       
     	switch( this->s_ADC_ResultStructure.commandIdSource )
     	{
@@ -56,7 +57,7 @@ void MCDRV_CurrAndVoltDcBusGet(mcdrv_adc_t *this)
     			break;
     	}
     }
-    while( LPADC_GetConvResult(this->pToAdcBase, &this->s_ADC_ResultStructure, 1U) )
+    while( GetAdcResFIFO(this->pToAdcBase, &this->s_ADC_ResultStructure, 1U) )
     {
         if(this->s_ADC_ResultStructure.commandIdSource == 1)
         {
@@ -251,4 +252,34 @@ void MCDRV_VoltDcBusGet(mcdrv_adc_t *this)
 void MCDRV_AuxValGet(mcdrv_adc_t *this)
 {
 
+}
+
+/*!
+ * @brief Get measured ADC value stored in FIFO
+ *
+ * @param pBase LPADC peripheral base address
+ *
+ * @param pResult Pointer to structure variable that keeps the conversion result in conversion FIFO
+ *
+ * @return Status whether FIFO entry is valid
+ */
+static bool GetAdcResFIFO(ADC_Type *pBase, lpadc_conv_result_t *pResult, uint8_t index)
+{
+  assert(pResult != NULL); /* Check if the input pointer is available. */
+  
+  uint32_t tmp32;
+  
+  tmp32 = pBase->RESFIFO[index];
+  
+  if (0U == (ADC_RESFIFO_VALID_MASK & tmp32))
+  {
+    return false; /* FIFO is empty. Discard any read from RESFIFO. */
+  }
+  
+  pResult->commandIdSource = (tmp32 & ADC_RESFIFO_CMDSRC_MASK) >> ADC_RESFIFO_CMDSRC_SHIFT;
+  pResult->loopCountIndex = (tmp32 & ADC_RESFIFO_LOOPCNT_MASK) >> ADC_RESFIFO_LOOPCNT_SHIFT;
+  pResult->triggerIdSource = (tmp32 & ADC_RESFIFO_TSRC_MASK) >> ADC_RESFIFO_TSRC_SHIFT;
+  pResult->convValue = (uint16_t)(tmp32 & ADC_RESFIFO_D_MASK);
+  
+  return true;
 }
