@@ -5,7 +5,7 @@ Package:                   an-lpc553x-dual-servo-motor-control
 Version:                   1.0
 Outgoing License:          LA_OPT_NXP_Software_License v48 July 2023- Additional Distribution License granted, license in Section 2.3 applies
 License File:              LICENSE
-Description and comments:  This application code is to demostrate dual servo motor control performance based on LPC553x-EVK.
+Description and comments:  This application code is to demonstrate dual servo motor control performance based on LPC553x-EVK.
 Release Location:          https://github.com/nxp-appcodehub/an-lpc553x-dual-servo-motor-control
 Origin:                    NXP (proprietary)
                            NXP (BSD-3-Clause)
