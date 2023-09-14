@@ -1,4 +1,7 @@
 <data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" id="an-lpc553x-dual-servo-motor-control" type="app_note" format="projectfile" name="LPC553x dual-servo motor control">
+    <display_title>
+        Dual servo motor control using LPC553x
+    </display_title>
     <overview>
         <![CDATA[<div>This application note describes the dual servo demo with the NXP LPC55S36&nbsp;<span style="background-color: rgb(255 255 255/var(--tw-bg-opacity)); color: var(--tw-prose-body); font-size: 1rem;">processor. It also can be used as a reference for motor control application&nbsp;</span><span style="background-color: rgb(255 255 255/var(--tw-bg-opacity)); color: var(--tw-prose-body); font-size: 1rem;">developing based on other products.</span></div>]]>
     </overview>
