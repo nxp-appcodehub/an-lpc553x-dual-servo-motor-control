@@ -1,6 +1,9 @@
-<data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" id="an-lpc553x-dual-servo-motor-control" type="app_note" format="projectfile" name="LPC553x dual-servo motor control">
+<data:item xmlns:data="data" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="data ../../xsd/alp.xsd" id="an-an13569-lpc553x-dual-servo-motor-control" type="app_note" format="projectfile" name="AN13569 LPC553x dual-servo motor control">
+    <display_title>
+        AN13569 How to run dual-servo motor on LPC553x
+    </display_title>
     <overview>
-        <![CDATA[<div>This application note describes the dual servo demo with the NXP LPC55S36&nbsp;<span style="background-color: rgb(255 255 255/var(--tw-bg-opacity)); color: var(--tw-prose-body); font-size: 1rem;">processor. It also can be used as a reference for motor control application&nbsp;</span><span style="background-color: rgb(255 255 255/var(--tw-bg-opacity)); color: var(--tw-prose-body); font-size: 1rem;">developing based on other products.</span></div>]]>
+        <![CDATA[This application note describes the dual servo demo with the NXP LPC55S36 processor. It also can be used as a reference for motor control application developing based on other products.]]>
     </overview>
     <toolchains>
         <toolchain name="iar"></toolchain>
@@ -16,10 +19,11 @@
     </nxp_ebh_hw>
     <peripherals>
         <peripheral name="adc"></peripheral>
-        <peripheral name="gpio"></peripheral>
         <peripheral name="clocks"></peripheral>
+        <peripheral name="gpio"></peripheral>
         <peripheral name="pwm"></peripheral>
         <peripheral name="uart"></peripheral>
+        <peripheral name="timer"></peripheral>
     </peripherals>
     <categories>
         <category name="motor_control"></category>
